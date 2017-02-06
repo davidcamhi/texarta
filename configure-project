@@ -1,0 +1,10 @@
+chmod 777 -R vendor/
+chmod 777 -R storage/
+mv server.php index.php
+cp ../b2v/.htaccess .
+rm -f public/.htaccess
+cp ../robots.resp.txt . && mv robots.resp.txt robots.txt
+rm -f public/robots.txt
+composer require laravelcollective/html
+rm -f config/app.php && cp ../bander/config/app.php config/.
+

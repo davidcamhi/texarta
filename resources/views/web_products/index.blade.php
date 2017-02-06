@@ -1,0 +1,132 @@
+@extends('layouts.web')
+@section('meta')
+	<meta charset="utf-8" /> 
+	<title>Texarta | Lista de productos</title>
+	<meta name="keywords" content="HTML5,CSS3,Template" />
+	<meta name="description" content="" />
+	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+	<!-- mobile settings -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+@endsection
+@section('styles')
+	<link href="{{ asset('public/css/web_page/layout-shop.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('public/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" />
+	<!--<link href="{{ asset('public/plugins/owl-carousel/owl.theme.css') }}" rel="stylesheet" type="text/css" />-->
+@endsection
+@section('breadcrumbs')
+<section class="page-header page-header-md parallax parallax-1" id="parallax_texarta" style="">
+	<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+	<div class="container">
+		<h1>PRODUCTOS</h1>
+		<!-- breadcrumbs -->
+		<ol class="breadcrumb" style="position:relative;margin-top:5px;">
+			<li><a href="#">Inicio</a></li>
+			<li class="active">Productos</li>
+		</ol><!-- /breadcrumbs -->
+	</div>		
+</section>
+	
+@endsection
+@section('content')
+	<div class="container">
+		<div class="row text-center">
+            <div class=" col-lg-12 col-sm-12"><a href="{{ url('colores') }}" style=""><button class="btn btn-primary btn-lg">Buscar por color</button></div></a>
+        </div>
+		<div class="row">
+            
+			<!-- RIGHT -->
+			<div class="col-lg-12 col-md-12 col-sm-12">
+	
+				<!-- LIST OPTIONS -->
+				<!--<div class="clearfix shop-list-options margin-bottom-20">
+	
+					<ul class="pagination nomargin pull-right">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+	
+					<div class="options-left">
+						<select>
+							<option value="pos_asc">Position ASC</option>
+							<option value="pos_desc">Position DESC</option>
+							<option value="name_asc">Name ASC</option>
+							<option value="name_desc">Name DESC</option>
+							<option value="price_asc">Price ASC</option>
+							<option value="price_desc">Price DESC</option>
+						</select>
+						
+					</div>
+	
+				</div>
+				<!-- /LIST OPTIONS -->
+				
+								<!-- 
+					controlls-over		= navigation buttons over the image 
+					buttons-autohide 	= navigation buttons visible on mouse hover only
+					
+					data-plugin-options:
+						"singleItem": true
+						"autoPlay": true (or ms. eg: 4000)
+						"navigation": true
+						"pagination": true
+						"items": "5"
+				
+					owl-carousel item paddings
+						.owl-padding-0
+						.owl-padding-3
+						.owl-padding-6
+						.owl-padding-10
+						.owl-padding-15
+						.owl-padding-20
+				-->
+                @foreach($categories as $category)
+                
+				    <h1 style="margin: 0 0 20px 0;">{{ $category->name }}</h1>
+                    <div class="text-center">
+                        <div class="owl-carousel owl-padding-3 controlls-over" data-plugin-options='{"singleItem": false, "items": "4", "autoPlay": false, "navigation": true, "pagination": true}'>
+                            @foreach($products as $product)
+                                @if($product->category_id == $category->id)
+                                 <div class="item">
+                                    <div class="">
+                                        <div class="thumbnail">
+                                            <!-- product image(s) -->
+                                            <a class="shop-item-image" href="{{ url('lista-productos/'.$product->id)  }}">
+                                                <img style="min-height:269px; max-height:269px" class="img-responsive" src="{{ asset('public/images/web_page/products/'.$product->image) }}" alt="shop first image" />
+                                            </a>
+                                            <!-- /product image(s) -->
+                                        </div>
+
+                                        <div class="shop-item-summary text-center">
+                                            <h2>{{ $product->name }}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                            @endforeach
+                        </div>
+                        <a href="{{ url('linea/'.$category->id)  }}" style=""><button class="btn btn-md btn-primary">Ver todos</button></a>
+                    </div>
+				    <hr />
+				@endforeach
+			</div>
+		</div><br>
+        <div class="row text-center">
+            <div class=" col-lg-12 col-sm-12"><a href="{{ url('colores') }}" style=""><button class="btn btn-primary btn-lg">Buscar por color</button></div></a>
+        </div>
+	</div>
+@endsection
+@section('scripts')
+	<!-- PAGE LEVEL SCRIPTS -->
+	<script type="text/javascript" src="{{ asset('public/js/web_page/demo.shop.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('public/plugins/owl-carousel/owl.carousel.js') }}"></script>
+    <script>
+        $("#li_productos").addClass('active');
+        $("#li_todos").addClass('active');
+    </script>
+@endsection

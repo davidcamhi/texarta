@@ -1,0 +1,7 @@
+User-agent: Twitterbot
+Disallow:
+
+# Don’t allow spambot to crawl any pages
+User-agent: spambot
+disallow: /
+
