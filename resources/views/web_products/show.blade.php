@@ -11,8 +11,8 @@
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 @endsection
 @section('styles')
-	<link href="{{ asset('public/css/web_page/layout-shop.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/css/web_page/layout-shop.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
 @endsection
 @section('breadcrumbs')
 	<section class="page-header page-header-xs" style="background-color: rgba(208, 239, 143, 0.3); padding: 10px 0 10px 0;">
@@ -55,13 +55,13 @@
 								.top-right
 								.top-left
 						-->
-						<a class="lightbox bottom-right" href="{{ asset('public/images/web_page/products/'.$product->image) }}" data-plugin-options='{"type":"image"}'><i class="glyphicon glyphicon-search"></i></a>
+						<a class="lightbox bottom-right" href="{{ asset('/images/web_page/products/'.$product->image) }}" data-plugin-options='{"type":"image"}'><i class="glyphicon glyphicon-search"></i></a>
 						<!-- 
 							image 
 							
 							Extra: add .image-bw class to force black and white!
 						-->
-						<img class="img-responsive" src="{{ asset('public/images/web_page/products/'.$product->image) }}" width="1200" height="1500" alt="This is the product title" />
+						<img class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" width="1200" height="1500" alt="This is the product title" />
 					</figure>
 				</div>
 				<!-- Thumbnails (required height:100px) -->
@@ -261,7 +261,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 
@@ -275,7 +275,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela2.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela2.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -288,7 +288,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -301,7 +301,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela3.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela3.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -314,7 +314,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -327,7 +327,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela2.jpg') }}" alt="shop first image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela2.jpg" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -340,7 +340,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="{{ asset('public/images/web_page/shop/products/1000x1500/tela.jpg') }}" alt="shop hover image" />
+						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop hover image" />
 					</a>
 					<!-- /product image(s) -->
 				</div>
@@ -354,8 +354,8 @@
 @endsection
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
-	<script type="text/javascript" src="{{ asset('public/js/web_page/demo.shop.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/plugins/owl-carousel/owl.carousel.js') }}"></script>
+	<script type="text/javascript" src="/js/web_page/demo.shop.js"></script>
+    <script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.js"></script>
     <script>
         $("#li_productos").addClass('active');
     </script>

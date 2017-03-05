@@ -11,9 +11,9 @@
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 @endsection
 @section('styles')
-	<link href="{{ asset('public/css/web_page/layout-shop.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('public/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" />
-	<!--<link href="{{ asset('public/plugins/owl-carousel/owl.theme.css') }}" rel="stylesheet" type="text/css" />-->
+	<link href="/css/web_page/layout-shop.css" rel="stylesheet" type="text/css" />
+	<link href="/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+	<!--<link href="/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />-->
 @endsection
 @section('breadcrumbs')
 <section class="page-header page-header-md parallax parallax-1" id="parallax_texarta" style="">
@@ -97,7 +97,7 @@
                                         <div class="thumbnail">
                                             <!-- product image(s) -->
                                             <a class="shop-item-image" href="{{ url('lista-productos/'.$product->id)  }}">
-                                                <img style="min-height:269px; max-height:269px" class="img-responsive" src="{{ asset('public/images/web_page/products/'.$product->image) }}" alt="shop first image" />
+                                                <img style="min-height:269px; max-height:269px" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
                                             </a>
                                             <!-- /product image(s) -->
                                         </div>
@@ -123,8 +123,8 @@
 @endsection
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
-	<script type="text/javascript" src="{{ asset('public/js/web_page/demo.shop.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('public/plugins/owl-carousel/owl.carousel.js') }}"></script>
+	<script type="text/javascript" src="/js/web_page/demo.shop.js"></script>
+	<script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.js"></script>
     <script>
         $("#li_productos").addClass('active');
         $("#li_todos").addClass('active');

@@ -11,7 +11,7 @@
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 @endsection
 @section('styles')
-	<link href="{{ asset('public/css/web_page/layout-shop.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/css/web_page/layout-shop.css" rel="stylesheet" type="text/css" />
 @endsection
 @section('breadcrumbs')
 <section class="page-header page-header-md parallax parallax-3" id="parallax_texarta" style="">
@@ -41,7 +41,7 @@
                     <li class="col-md-3 col-sm-3 col-xs-6">
                         <a href="{{ url('colores/'.$color->id) }}">
                             <h4>{{ $color->name }}</h4>
-                            <img style="min-height:200px; max-height:200px;" class="img-responsive" src="{{ asset('public/images/web_page/colors/'.$color->image)}}" alt="client">
+                            <img style="min-height:200px; max-height:200px;" class="img-responsive" src="{{ asset('/images/web_page/colors/'.$color->image) }}" alt="client">
                         </a>
                     </li>
                     @endforeach
@@ -55,7 +55,7 @@
 @endsection
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
-	<script type="text/javascript" src="{{ asset('public/js/web_page/demo.shop.js') }}"></script>
+	<script type="text/javascript" src="/js/web_page/demo.shop.js"></script>
     <script>
         $("#li_productos").addClass('active');
         $("#li_color").addClass('active');

@@ -92,7 +92,7 @@
                                         <td> {{ $product->backing }}  </td>
                                         <td> {{ $product->pattern }}  </td>
                                         <td width=10%>
-                                           <img width="30%" src="{{ asset('public/images/web_page/products/'.$product->image) }}" class="">
+                                           <img width="30%" src="/images/web_page/products/'.$product->image" class="">
                                         </td>
                                         <td>
                                             <div class="btn-group">
@@ -147,11 +147,11 @@
 
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="{{ asset('public/js/admin/datatable.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('public/js/admin/datatables/datatables.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('public/js/admin/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
+<script src="/js/admin/datatable.min.js" type="text/javascript"></script>
+<script src="/js/admin/datatables/datatables.min.js" type="text/javascript"></script>
+<script src="/js/admin/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 
-<script src="{{ asset('public/js/admin/table-datatables-responsive.js') }}" type="text/javascript"></script>
+<script src="/js/admin/table-datatables-responsive.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
  <script>
     // Redirect

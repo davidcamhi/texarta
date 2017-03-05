@@ -17,19 +17,19 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- REVOLUTION SLIDER -->
-		<link href="{{ asset('public/plugins/slider.revolution/css/extralayers.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('public/plugins/slider.revolution/css/settings.css') }}" rel="stylesheet" type="text/css" />
+		<link href="/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
-		<link href="{{ asset('public/css/web_page/essentials.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('public/css/web_page/layout.css') }}" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/layout.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="{{ asset('public/css/web_page/header-1.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('public/css/web_page/darkgreen.css') }}" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="/css/web_page/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/darkgreen.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -90,11 +90,11 @@
                             <!-- right -->
                             <ul class="top-links list-inline pull-right">
                                 <li>
-                                    <a class="dropdown-toggle no-text-underline" style="color:#fff;" data-toggle="dropdown" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/mx.png') }}" width="16" height="11" alt="lang" /> ESPAÑOL</a>
+                                    <a class="dropdown-toggle no-text-underline" style="color:#fff;" data-toggle="dropdown" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a>
                                     <ul class="dropdown-langs dropdown-menu">
-                                        <li><a tabindex="-1" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/us.png') }}" width="16" height="11" alt="lang" /> INGLÉS</a></li>
+                                        <li><a tabindex="-1" href="#"><img class="flag-lang" src="images/web_page/flags/us.png" width="16" height="11" alt="lang" /> INGLÉS</a></li>
                                         <li class="divider"></li>
-                                        <li><a tabindex="-1" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/mx.png') }}" width="16" height="11" alt="lang" /> ESPAÑOL</a></li>
+                                        <li><a tabindex="-1" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a></li>
                                     </ul>
                                 </li>	
                             </ul>
@@ -137,7 +137,7 @@
 
 						<!-- Logo -->
 						<a class="logo pull-left" href="{{ url('/') }}">
-							<img src="{{ asset('public/images/web_page/logo_texarta_light.png') }}" alt="" />
+							<img src="/images/web_page/logo_texarta_light.png" alt="" />
 						</a>
 						@include('partials.menus._menuWebBest')
 					</div>
@@ -181,9 +181,9 @@
 				<div class="fullscreenbanner" data-navigationStyle="">
 					<ul class="hide">
 						<!-- SLIDE  -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="10" data-saveperformance="off" data-title="Slide title 1" data-thumb="{{ asset('public/images/web_page/10-min.jpg') }}">
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="10" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg">
 
-							<img src="{{ asset('public/images/web_page/1x1.png') }}" data-lazyload="{{ asset('public/images/web_page/10-min.jpg') }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/10-min.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
 							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
 							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
@@ -257,9 +257,9 @@
 						</li>
 
 						<!-- SLIDE  -->
-						<li data-transition="boxfade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="{{ asset('public/images/web_page/24-min.jpg') }}">
+						<li data-transition="boxfade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="/images/web_page/24-min.jpg">
 
-							<img src="{{ asset('public/images/web_page/1x1.png') }}" data-lazyload="{{ asset('public/images/web_page/24-min.jpg') }}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/24-min.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
 
 							<div class="tp-caption very_large_text lfb ltt tp-resizeme"
 								data-x="right" data-hoffset="-100"
@@ -295,9 +295,9 @@
 						</li>
 
 						<!-- SLIDE -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="{{ asset('public/images/web_page/10-min.jpg') }}">
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg'">
 
-							<img src="{{ asset('public/images/web_page/1x1.png') }}" data-lazyload="{{ asset('public/images/web_page/10-min.jpg') }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/10-min.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
 							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
 							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
@@ -413,15 +413,15 @@
 
 		<!-- JAVASCRIPT FILES -->
 		<script type="text/javascript">var plugin_path = '../texarta/public/plugins/';</script>
-		<script type="text/javascript" src="{{ asset('public/js/web_page/jquery-2.2.3.min.js') }}"></script>
+		<script type="text/javascript" src="/js/web_page/jquery-2.2.3.min.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
-		<script type="text/javascript" src="{{ asset('public/plugins/slider.revolution/js/jquery.themepunch.tools.min.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('public/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('public/js/web_page/demo.revolution_slider.js') }}"></script>
+		<script type="text/javascript" src="/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="/js/web_page/demo.revolution_slider.js"></script>
 
 		<!-- SCRIPTS -->
-		<script type="text/javascript" src="{{ asset('public/js/web_page/scripts.js') }}"></script>
+		<script type="text/javascript" src="/js/web_page/scripts.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->
 		<!--<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>-->

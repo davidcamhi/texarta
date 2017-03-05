@@ -11,7 +11,7 @@
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 @endsection
 @section('styles')
-	<link href="{{ asset('public/css/web_page/layout-shop.css') }}" rel="stylesheet" type="text/css" />
+	<link href="/css/web_page/layout-shop.css" rel="stylesheet" type="text/css" />
 @endsection
 @section('breadcrumbs')
 <section class="page-header page-header-xsm parallax parallax-3" id="parallax_texarta" style="">
@@ -48,7 +48,7 @@
 							<div class="thumbnail">
 								<!-- product image(s) -->
 								<a class="shop-item-image" href="{{ url('lista-productos/'.$product->id) }}">
-									<img style="min-height:260px; max-height:260px;" class="img-responsive" src="{{ asset('public/images/web_page/products/'.$product->image) }}" alt="shop first image" />
+									<img style="min-height:260px; max-height:260px;" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
 								</a>
 								<!-- /product image(s) -->
 							</div>
@@ -72,5 +72,5 @@
 @endsection
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
-	<script type="text/javascript" src="{{ asset('public/js/web_page/demo.shop.js') }}"></script>
+	<script type="text/javascript" src="/js/web_page/demo.shop.js"></script>
 @endsection

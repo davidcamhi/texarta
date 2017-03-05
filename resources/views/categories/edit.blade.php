@@ -2,8 +2,8 @@
 
 @section('styles')
     <!-- DatePicker -->
-    <link rel="stylesheet" href="{{ asset('public/plugins/datePicker/css/bootstrap-datepicker3.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/plugins/datePicker/css/bootstrap-datepicker3.standalone.css') }}">
+    <link rel="stylesheet" href="/plugins/datePicker/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="/plugins/datePicker/css/bootstrap-datepicker3.standalone.css">
 @stop
 
 @section('content')
@@ -92,17 +92,17 @@
     }
 </script>
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="{{ asset('public/js/datatable.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('public/plugins/datatables/datatables.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('public/plugins/datePicker/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<script src="/js/datatable.min.js" type="text/javascript"></script>
+<script src="/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+<script src="/plugins/datePicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="{{ asset('public/js/form-samples.min.js') }}" type="text/javascript"></script>
+<script src="/js/form-samples.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- DatePicker -->
-<script src="{{ asset('public/plugins/datePicker/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('public/plugins/datePicker/locales/bootstrap-datepicker.es.min.js') }}"></script>
+<script src="/plugins/datePicker/js/bootstrap-datepicker.js"></script>
+<script src="/plugins/datePicker/locales/bootstrap-datepicker.es.min.js"></script>
 <script>
 </script>
 @endsection

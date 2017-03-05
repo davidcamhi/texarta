@@ -14,23 +14,23 @@
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
 	@yield('meta')
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('public/img/favicon.ico') }}">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/admin/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="{{ asset('public/css/admin/plugins.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/admin/layout.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/admin/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
-    <link href="{{ asset('public/css/admin/custom.css') }}" rel="stylesheet" type="text/css" />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/admin/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="/css/admin/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/admin/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/admin/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="/css/admin/custom.css" rel="stylesheet" type="text/css" />
 
     <!-- No van aqui -->
-    <link href="{{ asset('public/css/admin/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/admin/datatables/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="/css/admin/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/admin/datatables/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
     @yield('styles')
 
 </head>
@@ -42,7 +42,7 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="{{ url('usuarios') }}">
-                    <img src="{{ asset('public/img/test/logo2.png') }}" alt="logo" class="logo-default" />
+                    <img src="/img/test/logo2.png" alt="logo" class="logo-default" />
                     <!--<img src="{{-- asset('public/img/logo780x420.png') --}}" class="img-responsive" alt="jamz-logo" id="logo_img" style="max-height: 50px;" />-->
                 </a>
                 <div class="menu-toggler sidebar-toggler">
@@ -167,10 +167,10 @@
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 
                             @if(Auth::user())
-                                <!--<img alt="" class="img-circle" src="{{ asset('public/img/users/'.Auth::user()->photo) }}" />-->
+                                <!--<img alt="" class="img-circle" src="/img/users/'.Auth::user()->photo) }}" />-->
                                 <span class="username username-hide-on-mobile"> {{ Auth::user()->name.' '.Auth::user()->last_name }} </span>
                             @else
-                                <!--<img alt="" class="img-circle" src="{{ asset('public/img/test/avatar3_small.jpg') }}" />-->
+                                <!--<img alt="" class="img-circle" src="/img/test/avatar3_small.jpg" />-->
                                 <span class="username username-hide-on-mobile"> User </span>
                             @endif
                             <i class="fa fa-angle-down"></i>
@@ -247,27 +247,27 @@
     </div>
     <!-- END FOOTER -->
     <!--[if lt IE 9]>
-        <script src="{{ asset('public/plugins/respond.min.js') }}"></script>
-        <script src="{{ asset('public/plugins/excanvas.min.js') }}"></script>
+        <script src="/plugins/respond.min.js"></script>
+        <script src="/plugins/excanvas.min.js"></script>
     <![endif]-->
 
     <!-- BEGIN CORE PLUGINS -->
-    <script src="{{ asset('public/js/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/js/bootstrap.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/plugins/js.cookie.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
     <!-- END CORE PLUGINS -->
 
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
-    <script src="{{ asset('public/js/admin/app.js') }}" type="text/javascript"></script>
+    <script src="/js/admin/app.js" type="text/javascript"></script>
     <!-- END THEME GLOBAL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
-    <script src="{{ asset('public/js/admin/layout.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/js/admin/demo.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/js/admin/quick-sidebar.min.js') }}" type="text/javascript"></script>
+    <script src="/js/admin/layout.js" type="text/javascript"></script>
+    <script src="/js/admin/demo.min.js" type="text/javascript"></script>
+    <script src="/js/admin/quick-sidebar.min.js" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
 
     @yield('scripts')

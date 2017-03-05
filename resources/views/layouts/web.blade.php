@@ -9,16 +9,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-		<link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- THEME CSS -->
-		<link href="{{ asset('public/css/web_page/essentials.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('public/css/web_page/layout.css') }}" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/layout.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="{{ asset('public/css/web_page/header-1.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('public/css/web_page/darkblue.css') }}" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="/css/web_page/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
 		@yield('styles')
 	</head>
 
@@ -53,11 +53,11 @@
 					<!-- right -->
 					<ul class="top-links list-inline pull-right">
 						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/mx.png') }}" width="16" height="11" alt="lang" /> ESPAÑOL</a>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a>
 							<ul class="dropdown-langs dropdown-menu">
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/us.png') }}" width="16" height="11" alt="lang" /> INGLÉS</a></li>
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="/images/web_page/flags/us.png" width="16" height="11" alt="lang" /> INGLÉS</a></li>
 								<li class="divider"></li>
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="{{ asset('public/images/web_page/flags/mx.png') }}" width="16" height="11" alt="lang" /> ESPAÑOL</a></li>
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a></li>
 							</ul>
 						</li>	
 					</ul>
@@ -128,7 +128,7 @@
 
 						<!-- Logo -->
 						<a class="logo pull-left" href="{{ url('/') }}">
-							<img src="{{ asset('public/images/web_page/logo_texarta.png') }}" alt="" />
+							<img src="/images/web_page/logo_texarta.png" alt="" />
 						</a>
 						@include('partials.menus._menuWebBest')
 
@@ -204,11 +204,11 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script type="text/javascript">var plugin_path = '{{ asset('public/plugins') }}/';</script>
-		<script type="text/javascript" src="{{ asset('public/js/web_page/jquery-2.2.3.min.js') }}"></script>
+		<script type="text/javascript">var plugin_path = '/plugins/';</script>
+		<script type="text/javascript" src="/js/web_page/jquery-2.2.3.min.js"></script>
 
 
-		<script type="text/javascript" src="{{ asset('public/js/web_page/scripts.js') }}"></script>
+		<script type="text/javascript" src="/js/web_page/scripts.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->
 		<!--<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>-->
