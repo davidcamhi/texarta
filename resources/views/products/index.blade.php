@@ -92,7 +92,7 @@
                                         <td> {{ $product->backing }}  </td>
                                         <td> {{ $product->pattern }}  </td>
                                         <td width=10%>
-                                           <img width="30%" src="/images/web_page/products/'.$product->image" class="">
+                                           <img width="30%" src="/images/web_page/products/{{$product->image}}" class="">
                                         </td>
                                         <td>
                                             <div class="btn-group">

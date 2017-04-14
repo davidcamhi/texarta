@@ -71,7 +71,7 @@ class ProductsController extends Controller
         $product->pattern = $request->get('pattern');
         
         $imageName = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images/web_page/products'), $imageName);
+        $request->image->move('../public/images/web_page/products', $imageName);
         $product->image = $imageName;
         
         $product->save();
@@ -137,7 +137,7 @@ class ProductsController extends Controller
         
 		if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images/web_page/products'), $imageName);
+            $request->image->move('../public/images/web_page/products', $imageName);
             $product->image = $imageName;
         }
         

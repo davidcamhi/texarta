@@ -51,7 +51,7 @@ class ColorsController extends Controller
         $color->description = $request->get('description');
         
         $imageName = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images/web_page/colors'), $imageName);
+        $request->image->move('../public/images/web_page/colors', $imageName);
         $color->image = $imageName;
         
         $color->save();
@@ -98,7 +98,7 @@ class ColorsController extends Controller
         
 		if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images/web_page/colors'), $imageName);
+            $request->image->move('../public/images/web_page/colors', $imageName);
             $color->image = $imageName;
         }
         

@@ -64,7 +64,7 @@
                                            {{ $color->description }}
                                         </td>
                                         <td width=10%>
-                                           <img width="30%" src="/images/web_page/colors/'.$color->image" class="">
+                                           <img width="30%" src="images/web_page/colors/{{$color->image}}" class="">
                                         </td>
                                         <td>
                                             <div class="btn-group">
