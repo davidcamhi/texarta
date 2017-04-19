@@ -30,6 +30,11 @@ Route::resource('usuarios', 'UsersController');
 Route::get('lineas/getDelete', 'CategoriesController@getDelete');
 Route::post('lineas/postCategory', 'CategoriesController@postCategory');
 Route::resource('lineas', 'CategoriesController');
+
+//SLIDES
+Route::post('admin_slides/postSlide', 'SlidesController@postSlide');
+Route::resource('admin_slides', 'SlidesController');
+
 //COLORS
 Route::get('admin_colores/getDelete', 'ColorsController@getDelete');
 Route::post('admin_colores/postColor', 'ColorsController@postColor');
@@ -52,6 +57,8 @@ Route::post('cotizacion/postPrice', 'PricesController@postPrice');
 Route::resource('cotizacion', 'PricesController');
 
 //WEB
+//HOME
+Route::resource('/', 'HomeController');
 //PRODUCTS
 Route::resource('lista-productos', 'WebProductsController');
 

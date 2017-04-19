@@ -11,7 +11,12 @@
         <span class="title">Usuarios</span>
     </a>
 </li>
-
+<li class="nav-item" id="li-slides">
+    <a href=" {{ url('admin_slides') }} " class="nav-link">
+        <i class="fa fa-home"></i>
+        <span class="title">Home Page</span>
+    </a>
+</li>
 <li class="nav-item" id="li-products">
     <a href=" {{ url('productos') }} " class="nav-link">
         <i class="fa fa-tags"></i> 

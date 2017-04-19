@@ -183,7 +183,7 @@
 						<!-- SLIDE  -->
 						<li data-transition="fade" data-slotamount="1" data-masterspeed="10" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg">
 
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/10-min.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[0]->img }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
 							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
 							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
@@ -259,7 +259,7 @@
 						<!-- SLIDE  -->
 						<li data-transition="boxfade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="/images/web_page/24-min.jpg">
 
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/24-min.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[1]->img }}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
 
 							<div class="tp-caption very_large_text lfb ltt tp-resizeme"
 								data-x="right" data-hoffset="-100"
@@ -297,7 +297,7 @@
 						<!-- SLIDE -->
 						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg'">
 
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/10-min.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[2]->img }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
 							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
 							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
