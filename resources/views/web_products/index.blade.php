@@ -94,10 +94,10 @@
                                 @if($product->category_id == $category->id)
                                  <div class="item">
                                     <div class="">
-                                        <div class="thumbnail">
+                                        <div style="overflow: hidden" class="thumbnail">
                                             <!-- product image(s) -->
                                             <a class="shop-item-image" href="{{ url('lista-productos/'.$product->id)  }}">
-                                                <img style="min-height:269px; max-height:269px" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
+                                                <img style="min-height:269px; max-height:269px;transform:scale(1.3,1.3);" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
                                             </a>
                                             <!-- /product image(s) -->
                                         </div>

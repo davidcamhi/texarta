@@ -38,8 +38,9 @@ class WebProductsController extends Controller
     {
         
         $product = Product::findOrFail($id);
-        
+        $others = Product::where('color_id', $product->color_id)->get();
          return view('web_products.show')
+             ->with('others',$others)
             ->with('product', $product);
     }
 	

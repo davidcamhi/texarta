@@ -45,7 +45,7 @@
 						
 						data-mode="mouseover|grab|click|toggle"
 					-->
-					<figure id="zoom-primary" class="zoom" data-mode="click">
+					<figure style="overflow: hidden;" id="zoom-primary" class="zoom" data-mode="click">
 						<!-- 
 							zoom buttton
 							
@@ -61,7 +61,7 @@
 							
 							Extra: add .image-bw class to force black and white!
 						-->
-						<img class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" width="1200" height="1500" alt="This is the product title" />
+						<img style="transform:scale(1.3,1.3)" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" width="1200" height="1500" alt="This is the product title" />
 					</figure>
 				</div>
 				<!-- Thumbnails (required height:100px) -->
@@ -255,19 +255,7 @@
 		<h2 class="owl-featured"><strong>Otros</strong> colores:</h2>
 		<div class="owl-carousel featured nomargin owl-padding-10" data-plugin-options='{"singleItem": false, "items": "5", "stopOnHover":false, "autoPlay":4500, "autoHeight": false, "navigation": true, "pagination": false}'>
 
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
-					</a>
-					<!-- /product image(s) -->
-
-				</div>
-			</div>
-			<!-- /item -->
+			@foreach($others as $other)
 
 			<!-- item -->
 			<div class="shop-item nomargin">
@@ -275,78 +263,14 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela2.jpg" alt="shop first image" />
+						<img class="img-responsive" src="{{ asset('/images/web_page/products/'.$other->image) }}" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
+
 				</div>
 			</div>
 			<!-- /item -->
-
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
-					</a>
-					<!-- /product image(s) -->
-				</div>
-			</div>
-			<!-- /item -->
-
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela3.jpg" alt="shop first image" />
-					</a>
-					<!-- /product image(s) -->
-				</div>
-			</div>
-			<!-- /item -->
-
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop first image" />
-					</a>
-					<!-- /product image(s) -->
-				</div>
-			</div>
-			<!-- /item -->
-
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela2.jpg" alt="shop first image" />
-					</a>
-					<!-- /product image(s) -->
-				</div>
-			</div>
-			<!-- /item -->
-
-			<!-- item -->
-			<div class="shop-item nomargin">
-
-				<div class="thumbnail">
-					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
-						<img class="img-responsive" src="/images/web_page/shop/products/1000x1500/tela.jpg" alt="shop hover image" />
-					</a>
-					<!-- /product image(s) -->
-				</div>
-			</div>
-			<!-- /item -->
-
+			@endforeach
 		</div>
 		<!-- /RELATED -->
 
