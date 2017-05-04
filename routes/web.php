@@ -60,8 +60,8 @@ Route::resource('cotizacion', 'PricesController');
 //HOME
 Route::resource('/', 'HomeController');
 //PRODUCTS
+Route::get('lista-productos/buscar', 'WebProductsController@search');
 Route::resource('lista-productos', 'WebProductsController');
-
 //CATEGORIES
 Route::resource('linea', 'WebCategoriesController');
 

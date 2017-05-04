@@ -1243,7 +1243,7 @@ section.dark.page-header ul.page-options a {
 		box-shadow: 5px 5px rgba(91, 91, 91, 0.2);
 		width: 274px;
 		margin-top: 36px;
-		z-index: 22;
+		z-index: 220;
 	}
 	#header.header-md li.search .search-box {
 		margin-top:25px;

@@ -112,15 +112,15 @@
 									<i class="fa fa-search"></i>
 								</a>
 								<div class="search-box">
-									<form action="page-search-result-1.html" method="get">
-										<div class="input-group">
-											<input type="text" name="src" placeholder="Buscar" class="form-control" />
+									{!! Form::open(['method'=>'GET','url'=>'lista-productos/buscar','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+									<div class="input-group">
+											<input type="text" name="search" placeholder="Buscar" class="form-control" />
 											<span class="input-group-btn">
 												<button class="btn btn-primary" type="submit">Buscar</button>
 											</span>
 										</div>
-									</form>
-								</div> 
+									{!! Form::close() !!}
+								</div>
 							</li>
 							<!-- /SEARCH -->
 						</ul>
@@ -210,8 +210,6 @@
 
 		<script type="text/javascript" src="/js/web_page/scripts.js"></script>
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<!--<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>-->
 
 		@yield('scripts')
 	</body>

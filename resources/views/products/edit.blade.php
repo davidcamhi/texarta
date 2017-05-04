@@ -5,7 +5,20 @@
     <link rel="stylesheet" href="/plugins/datePicker/css/bootstrap-datepicker3.css">
     <link rel="stylesheet" href="/plugins/datePicker/css/bootstrap-datepicker3.standalone.css">
 @stop
-
+<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+<script>
+    tinymce.init({
+        selector: '#description',
+        theme: 'modern',
+        height: 200,
+        plugins: [
+            'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+            'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+            'save table contextmenu directionality emoticons template paste textcolor'
+        ],
+        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+    });
+</script>
 @section('content')
 <div class="page-content">
 	<!-- BEGIN PAGE BAR -->
@@ -55,7 +68,7 @@
 	                                         <div class="col-md-6">
 	                                            <div class="form-group">
 	                                                <label class="control-label">Descripción</label>
-	                                                <textarea class="form-control" name="description" placeholder="Descripción del color.">{{ $product->description }}</textarea>
+	                                                <textarea class="form-control" id="description" name="description" placeholder="Descripción del color.">{{ $product->description }}</textarea>
 	                                                <!--<span class="help-block"> This field has error. </span>-->
 	                                            </div>
 	                                        </div>

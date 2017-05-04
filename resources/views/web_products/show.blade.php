@@ -169,7 +169,7 @@
 					</div>
 					<!-- DESCRIPTION -->
 					<div role="tabpanel" class="tab-pane fade in" id="description">
-						<p>{{ $product->description }}</p>
+						{!! $product->description !!}
 					</div>
 					
 					
@@ -262,7 +262,7 @@
 
 				<div class="thumbnail">
 					<!-- product image(s) -->
-					<a class="shop-item-image" href="shop-single-left.html">
+					<a class="shop-item-image" href="{{ url('lista-productos/'.$other->id)  }} ">
 						<img class="img-responsive" src="{{ asset('/images/web_page/products/'.$other->image) }}" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->

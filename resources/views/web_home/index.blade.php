@@ -121,15 +121,15 @@
 									<i class="fa fa-search"></i>
 								</a>
 								<div class="search-box">
-									<form action="page-search-result-1.html" method="get">
-										<div class="input-group">
-											<input type="text" name="src" placeholder="Buscar" class="form-control" />
-											<span class="input-group-btn">
+									{!! Form::open(['method'=>'GET','url'=>'lista-productos/buscar','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+									<div class="input-group">
+										<input type="text" name="search" placeholder="Buscar" class="form-control" />
+										<span class="input-group-btn">
 												<button class="btn btn-primary" type="submit">Buscar</button>
 											</span>
-										</div>
-									</form>
-								</div> 
+									</div>
+									{!! Form::close() !!}
+								</div>
 							</li>
 							<!-- /SEARCH -->
 						</ul>
@@ -412,7 +412,7 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-		<script type="text/javascript">var plugin_path = '../texarta/public/plugins/';</script>
+		<script type="text/javascript">var plugin_path = '/plugins/';</script>
 		<script type="text/javascript" src="/js/web_page/jquery-2.2.3.min.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
@@ -422,7 +422,7 @@
 
 		<!-- SCRIPTS -->
 		<script type="text/javascript" src="/js/web_page/scripts.js"></script>
-		
+
 		<!-- STYLESWITCHER - REMOVE -->
 		<!--<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>-->
 	</body>
