@@ -99,8 +99,8 @@ class SlidesController extends Controller
 
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move('../public/images/web_page/slides', $imageName);
-            $slider->image = $imageName;
+            $request->img->move('../public/images/web_page/slides', $imageName);
+            $slider->img = $imageName;
         }
 
         $slider->save();

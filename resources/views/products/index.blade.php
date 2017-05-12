@@ -74,7 +74,7 @@
                                     <td> {{ $product->category->name }}  </td>
                                     <td> {{ $product->color->name }}  </td>
                                     <td>
-                                        {!! $product->description !!} 
+                                        {!! $product->description !!}
                                     </td>
                                     @if( $product->main == 1)
                                         <td>Si</td>
