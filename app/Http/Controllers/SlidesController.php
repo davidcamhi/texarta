@@ -97,12 +97,11 @@ class SlidesController extends Controller
         $slider = Slide::findOrFail($id);
         $slider->name = $request->get('name');
 
-        if ($request->hasFile('image')) {
-            $imageName = time().'.'.$request->image->getClientOriginalExtension();
+        if ($request->hasFile('img')) {
+            $imageName = time().'.'.$request->img->getClientOriginalExtension();
             $request->img->move('../public/images/web_page/slides', $imageName);
             $slider->img = $imageName;
         }
-
         $slider->save();
 
         return redirect('admin_slides');

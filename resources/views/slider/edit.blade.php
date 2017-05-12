@@ -57,7 +57,7 @@
                                             <div class="col-md-6">
                                                 <div class="">
                                                     <label class="control-label">Imagen</label>
-                                                    <input type="file" id="image" name="image" class="" placeholder="Seleccionar archivo">
+                                                    <input type="file" id="img" name="img" class="" placeholder="Seleccionar archivo">
                                                 </div>
                                             </div>
                                             <!--/span-->
