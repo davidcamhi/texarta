@@ -22,8 +22,8 @@
 	
 			<!-- breadcrumbs -->
 			<ol class="breadcrumb" style="position:relative;margin-top:5px;">
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Productos</a></li>
+				<li><a href="{{ URL('/') }}">Inicio</a></li>
+				<li><a href="{{ URL('lista-productos') }}">Productos</a></li>
 				<li class="active">{{ $product->name }}</li>
 			</ol><!-- /breadcrumbs -->
 	
@@ -263,7 +263,7 @@
 				<div class="thumbnail">
 					<!-- product image(s) -->
 					<a class="shop-item-image" href="{{ url('lista-productos/'.$other->id)  }} ">
-						<img class="img-responsive" src="{{ asset('/images/web_page/products/'.$other->image) }}" alt="shop first image" />
+						<img style="transform:scale(1.3,1.3);" class="img-responsive" src="{{ asset('/images/web_page/products/'.$other->image) }}" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
 

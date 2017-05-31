@@ -21,8 +21,7 @@
         
 		<!-- breadcrumbs -->
 		<ol class="breadcrumb" style="position:relative;margin-top:5px;">
-			<li><a href="#">Inicio</a></li>
-			<li class="active"><a href="{{ url('lista-productos') }}">Productos</a></li>
+			<li><a href="{{ URL('/') }}">Inicio</a></li>
 			<li class="active">Colores</li>
 		</ol><!-- /breadcrumbs -->
 
@@ -41,7 +40,7 @@
                     <li class="col-md-3 col-sm-3 col-xs-6">
                         <a href="{{ url('colores/'.$color->id) }}">
                             <h4>{{ $color->name }}</h4>
-                            <img style="min-height:200px; max-height:200px;" class="img-responsive" src="{{ asset('/images/web_page/colors/'.$color->image) }}" alt="client">
+                            <img style="min-height:200px; max-height:200px;" class="img-responsive" src="{{ asset('/images/web_page/colors/'.$color->image) }}" alt="{{ $color->name  }}">
                         </a>
                     </li>
                     @endforeach

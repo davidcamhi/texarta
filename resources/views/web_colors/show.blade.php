@@ -48,7 +48,7 @@
 							<div class="thumbnail" style="overflow: hidden;">
 								<!-- product image(s) -->
 								<a class="shop-item-image" href="{{ url('lista-productos/'.$product->id) }}">
-									<img style="min-height:260px; max-height:260px;transform:scale(1.3,1.3)" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
+									<img style="min-height:260px; max-height:260px;transform:scale(1.3,1.3)" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="{{ $product->name }}" />
 								</a>
 								<!-- /product image(s) -->
 							</div>

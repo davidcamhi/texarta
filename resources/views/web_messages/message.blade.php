@@ -21,7 +21,7 @@
 
 		<!-- breadcrumbs -->
 		<ol class="breadcrumb" style="position:relative;margin-top:5px;">
-			<li><a href="#">Inicio</a></li>
+			<li><a href="{{ URL('/') }}">Inicio</a></li>
 			<li>Contacto</li>
 			<li class="active">Mensaje</li>
 		</ol><!-- /breadcrumbs -->
