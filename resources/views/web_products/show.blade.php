@@ -258,7 +258,7 @@
 			@foreach($others as $other)
 
 			<!-- item -->
-			<div class="shop-item nomargin">
+			<div class="shop-item nomargin" style="overflow: hidden;">
 
 				<div class="thumbnail">
 					<!-- product image(s) -->
