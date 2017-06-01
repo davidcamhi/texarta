@@ -89,7 +89,7 @@
                 
 				    <h1 style="margin: 0 0 20px 0;">{{ $category->name }}</h1>
                     <div class="text-center">
-                        <div class="owl-carousel owl-padding-3 controlls-over" data-plugin-options='{"singleItem": false, "items": "4", "autoPlay": false, "navigation": false, "pagination": true}'>
+                        <div class="owl-carousel owl-padding-3 controlls-over" data-plugin-options='{"singleItem": false, "items": "4", "autoPlay": false, "navigation": true, "pagination": false}'>
                             @foreach($products as $product)
                                 @if($product->category_id == $category->id)
                                  <div class="item">
