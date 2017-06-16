@@ -181,194 +181,85 @@
 				<div class="fullscreenbanner" data-navigationStyle="">
 					<ul class="hide">
 						<!-- SLIDE  -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="10" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg">
+						@foreach($slides as $slide)
+							<li data-transition="fade" data-slotamount="1" data-masterspeed="10" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg">
 
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[0]->img }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+								<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slide->img }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
 
-							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
-							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+								<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
+								<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
 
-							<div class="tp-caption customin ltl tp-resizeme text_white"
-								data-x="center"
-								data-y="205"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1000"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<span class="weight-300">TELAS / DISEÑO / COLORES / PATRONES</span>
-							</div>
+								<div class="tp-caption customin ltl tp-resizeme text_white"
+									 data-x="center"
+									 data-y="205"
+									 data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									 data-speed="800"
+									 data-start="1000"
+									 data-easing="easeOutQuad"
+									 data-splitin="none"
+									 data-splitout="none"
+									 data-elementdelay="0.01"
+									 data-endelementdelay="0.1"
+									 data-endspeed="1000"
+									 data-endeasing="Power4.easeIn" style="z-index: 10;">
+									<span class="weight-300">{{ $slide->list }}</span>
+								</div>
 
-							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
-								data-x="center"
-								data-y="255"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1200"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								TEXARTA
-							</div>
+								<div class="tp-caption customin ltl tp-resizeme large_bold_white"
+									 data-x="center"
+									 data-y="255"
+									 data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									 data-speed="800"
+									 data-start="1200"
+									 data-easing="easeOutQuad"
+									 data-splitin="none"
+									 data-splitout="none"
+									 data-elementdelay="0.01"
+									 data-endelementdelay="0.1"
+									 data-endspeed="1000"
+									 data-endeasing="Power4.easeIn" style="z-index: 10;">
+									{{ $slide->caption }}
+								</div>
 
-							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato size-20"
-								data-x="center"
-								data-y="345"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1400"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
-								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
-							</div>
+								<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato size-20"
+									 data-x="center"
+									 data-y="345"
+									 data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									 data-speed="800"
+									 data-start="1400"
+									 data-easing="easeOutQuad"
+									 data-splitin="none"
+									 data-splitout="none"
+									 data-elementdelay="0.01"
+									 data-endelementdelay="0.1"
+									 data-endspeed="1000"
+									 data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
+									{{ $slide->text }}
+								</div>
 
-							<div class="tp-caption customin ltl tp-resizeme"
-								data-x="center"
-								data-y="433"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1550"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<a href="#purchase" class="btn btn-default btn-lg">
-									<span>Nuestros Productos</span> 
-								</a>
-							</div>
+								<div class="tp-caption customin ltl tp-resizeme"
+									 data-x="center"
+									 data-y="433"
+									 data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									 data-speed="800"
+									 data-start="1550"
+									 data-easing="easeOutQuad"
+									 data-splitin="none"
+									 data-splitout="none"
+									 data-elementdelay="0.01"
+									 data-endelementdelay="0.1"
+									 data-endspeed="1000"
+									 data-endeasing="Power4.easeIn" style="z-index: 10;">
+									@if($slide->button)
+										<a href="{{ url($slide->link) }}" class="btn btn-default btn-lg">
+											<span>{{ $slide->button }}</span>
+										</a>
+									@endif
 
-						</li>
+								</div>
 
-						<!-- SLIDE  -->
-						<li data-transition="boxfade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 2" data-thumb="/images/web_page/24-min.jpg">
-
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[1]->img }}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="110" />
-
-							<div class="tp-caption very_large_text lfb ltt tp-resizeme"
-								data-x="right" data-hoffset="-100"
-								data-y="center" data-voffset="-100"
-								data-speed="600"
-								data-start="800"
-								data-easing="Power4.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								data-endeasing="Power4.easeIn">
-								RUN WILD
-							</div>
-
-							<div class="tp-caption medium_light_white lfb ltt tp-resizeme"
-								data-x="right" data-hoffset="-110"
-								data-y="center" data-voffset="10"
-								data-speed="600"
-								data-start="900"
-								data-easing="Power4.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								data-endeasing="Power4.easeIn">
-								Happiness is an accident of nature,<br/>
-								a beautiful and flawless aberration.<br/>
-								<span style="font-size:24px;font-weight:400;">&ndash; Pat Conroy</span>
-							</div>
-						</li>
-
-						<!-- SLIDE -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide title 1" data-thumb="/images/web_page/10-min.jpg'">
-
-							<img src="/images/web_page/1x1.png" data-lazyload="/images/web_page/slides/{{ $slides[2]->img }}" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
-
-							<div class="tp-dottedoverlay twoxtwo"><!-- dotted overlay --></div>
-							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
-
-							<div class="tp-caption customin ltl tp-resizeme text_white"
-								data-x="center"
-								data-y="205"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1000"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<span class="weight-300">DEVELOPMENT / MARKETING / DESIGN / PHOTO</span>
-							</div>
-
-							<div class="tp-caption customin ltl tp-resizeme large_bold_white"
-								data-x="center"
-								data-y="255"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1200"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								TELAS DE CALIDAD
-							</div>
-
-							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato size-20"
-								data-x="center"
-								data-y="345"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1400"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
-								Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
-							</div>
-
-							<div class="tp-caption customin ltl tp-resizeme"
-								data-x="center"
-								data-y="433"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1550"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<a style="font-size:20px;" href="#purchase" class="btn btn-default btn-lg">
-									<span>LÍNEAS</span>
-								</a>
-							</div>
-
-						</li>
+							</li>
+						@endforeach
 
 					</ul>
 					<div class="tp-bannertimer"></div>

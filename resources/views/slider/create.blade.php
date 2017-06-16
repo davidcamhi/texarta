@@ -26,7 +26,7 @@
         </div>
         <!-- END PAGE BAR -->
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title"> Crear Color
+        <h3 class="page-title"> Crear Slide
             <small>nuevo</small>
         </h3>
         <!-- END PAGE TITLE-->
@@ -68,6 +68,72 @@
                                                 </div>
                                                 <!--/span-->
                                             </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Titulo</label>
+                                                        <input type="text" id="caption" name="caption" class="form-control" placeholder="Titulo">
+                                                        @if ($errors->has('caption'))
+                                                            <span class="help-block"><strong>{{ $errors->first('caption') }}</strong></span>
+                                                        @endif
+                                                    <!--<span class="help-block"> This is inline help </span>-->
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Lista</label>
+                                                        <input type="text" id="list" name="list" class="form-control" placeholder="Lista de elementos">
+                                                        @if ($errors->has('list'))
+                                                            <span class="help-block"><strong>{{ $errors->first('list') }}</strong></span>
+                                                    @endif
+                                                    <!--<span class="help-block"> This is inline help </span>-->
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Botón</label>
+                                                        <input type="text" id="button" name="button" class="form-control" placeholder="Texto en el botón">
+                                                        @if ($errors->has('button'))
+                                                            <span class="help-block"><strong>{{ $errors->first('button') }}</strong></span>
+                                                    @endif
+                                                    <!--<span class="help-block"> This is inline help </span>-->
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Link</label>
+                                                        <input type="text" id="link" name="link" class="form-control" placeholder="Link a la página...">
+                                                        @if ($errors->has('link'))
+                                                            <span class="help-block"><strong>{{ $errors->first('link') }}</strong></span>
+                                                    @endif
+                                                    <!--<span class="help-block"> This is inline help </span>-->
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="">
+                                                        <label class="control-label">Texto</label>
+                                                        <textarea id="text" name="text" class="form-control" placeholder="Texto"></textarea>
+                                                        @if ($errors->has('text'))
+                                                            <span class="help-block"><strong>{{ $errors->first('text') }}</strong></span>
+                                                    @endif
+                                                    <!--<span class="help-block"> This is inline help </span>-->
+                                                    </div>
+                                                </div>
+
+                                                <!--/span-->
+                                            </div>
+
                                         </div>
                                         <div class="form-actions right">
                                             <button type="button" onclick="redirect_slides();" class="btn default">Cancelar</button>

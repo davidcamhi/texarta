@@ -49,6 +49,11 @@ class SlidesController extends Controller
     {
         $slider = new Slide;
         $slider->name = $request->get('name');
+        $slider->caption = $request->get('caption');
+        $slider->text = $request->get('text');
+        $slider->list = $request->get('list');
+        $slider->button = $request->get('button');
+        $slider->link = $request->get('link');
 
         $imageName = time().'.'.$request->img->getClientOriginalExtension();
         $request->img->move('../public/images/web_page/slides', $imageName);
@@ -96,6 +101,12 @@ class SlidesController extends Controller
     {
         $slider = Slide::findOrFail($id);
         $slider->name = $request->get('name');
+        $slider->caption = $request->get('caption');
+        $slider->text = $request->get('text');
+        $slider->list = $request->get('list');
+        $slider->button = $request->get('button');
+        $slider->link = $request->get('link');
+
 
         if ($request->hasFile('img')) {
             $imageName = time().'.'.$request->img->getClientOriginalExtension();

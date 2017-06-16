@@ -37,6 +37,10 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
+                                        <a href="{{ url('admin_slides/create') }}">
+                                            <button id="sample_editable_1_new" class="btn sbold green"> Agregar
+                                                <i class="fa fa-plus"></i>
+                                            </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -46,6 +50,11 @@
                             <tr>
                                 <th class="desktop">Id</th>
                                 <th class="all"> Nombre </th>
+                                <th class="none"> Lista </th>
+                                <th class="none"> Titulo </th>
+                                <th class="none"> Texto </th>
+                                <th class="none"> Botón </th>
+                                <th class="none"> Link </th>
                                 <th class="none"> Imagen </th>
                                 <th class="min-tablet"> Acciones </th>
                             </tr>
@@ -55,6 +64,11 @@
                                 <tr class="odd gradeX">
                                     <td>{{ $slide->id }}</td>
                                     <td> {{ $slide->name }}  </td>
+                                    <td> {{ $slide->list }}  </td>
+                                    <td> {{ $slide->caption }}  </td>
+                                    <td> {{ $slide->text }}  </td>
+                                    <td> {{ $slide->button }}  </td>
+                                    <td> {{ $slide->link }}  </td>
                                     <td width=10%>
                                         <img width="30%" src="/images/web_page/slides/{{ $slide->img }}" class="">
                                     </td>

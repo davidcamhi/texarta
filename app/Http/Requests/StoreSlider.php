@@ -33,9 +33,9 @@ class StoreSlider extends FormRequest
     {
         return [
             'name.required' => 'El nombre de la slide es necesario.',
-            'image.required' => 'Debe elegir una imagen.',
-            'image.file' => 'Debe elegir un archivo.',
-            'image.image' => 'El archivo debe ser una imagen.',
+            'img.required' => 'Debe elegir una imagen.',
+            'img.file' => 'Debe elegir un archivo.',
+            'img.image' => 'El archivo debe ser una imagen.',
 
         ];
     }
