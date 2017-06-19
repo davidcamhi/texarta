@@ -108,7 +108,7 @@
                     <h4 class="modal-title">¿Estás seguro de eliminar esta Slide?</h4>
                 </div>
                 <div class="modal-body">
-                    <button id="delete" class="btn btn-danger">Borrar</button>
+                    <button id="delete_slides" class="btn btn-danger">Borrar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Regresar</button>
                 </div>
             </div>
@@ -125,13 +125,14 @@
 
 
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <script src="/js/admin/datatable.min.js" type="text/javascript"></script>
     <script src="/js/admin/datatables/datatables.min.js" type="text/javascript"></script>
     <script src="/js/admin/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 
     <script src="/js/admin/table-datatables-responsive.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
+
+        console.log("SADA");
         // Redirect
         function redirect_slides(){
             window.location="{{URL::to('admin_slides')}}";
@@ -144,7 +145,7 @@
         }
 
         // Delete tag
-        $('#delete').click(function(){
+        $('#delete_slides').click(function(){
 
             console.log("Deleting");
 

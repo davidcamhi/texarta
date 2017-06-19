@@ -120,7 +120,6 @@
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="/js/admin/datatable.min.js" type="text/javascript"></script>
-<script src="/js/admin/datatables/datatables.min.js" type="text/javascript"></script>
 <script src="/js/admin/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 
 <script src="/js/admin/table-datatables-responsive.js" type="text/javascript"></script>
