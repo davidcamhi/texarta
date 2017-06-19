@@ -117,4 +117,31 @@ class SlidesController extends Controller
 
         return redirect('admin_slides');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+    /**
+     * Delete (method used for confirmation screen)
+     *
+     * @param SimpleRequest $request
+     * @return Response
+     */
+    public function getDelete(Request $request)
+    {
+        $id_slide = $request->get('id');
+
+        $slide = Slide::find($id_slide);
+        $slide->delete();
+
+        return('Delete successfull!');
+    }
 }

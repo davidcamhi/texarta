@@ -82,6 +82,10 @@
                                                     <a href=" {{ url('admin_slides/'.$slide->id.'/edit')  }} ">
                                                         <i class="icon-docs"></i> Editar </a>
                                                 </li>
+                                                <li>
+                                                    <a href="javascript:;" onclick="getId({{ $slide->id }})" data-toggle="modal" data-target="#modal_user">
+                                                        <i class="icon-trash"></i> Eliminar </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </td>
@@ -101,7 +105,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">¿Estás seguro de eliminar este Color?</h4>
+                    <h4 class="modal-title">¿Estás seguro de eliminar esta Slide?</h4>
                 </div>
                 <div class="modal-body">
                     <button id="delete" class="btn btn-danger">Borrar</button>
@@ -129,15 +133,35 @@
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
         // Redirect
-        function redirect_colors(){
+        function redirect_slides(){
             window.location="{{URL::to('admin_slides')}}";
         }
 
         // Get id
         var id = '';
-        function getId(id_color){
-            id = id_color;
+        function getId(id_slide){
+            id = id_slide;
         }
 
+        // Delete tag
+        $('#delete').click(function(){
+
+            console.log("Deleting");
+
+            // Ajax request
+            $.ajax({
+                url: 'admin_slides/getDelete',
+                type: 'GET',
+                data: { "id": id, "_token": token },
+                cache: false,
+                success: function(response)
+                {
+                    console.log(response);
+                    redirect_slides();
+                }
+            });
+            console.log("DAVID");
+
+        });
     </script>
 @endsection

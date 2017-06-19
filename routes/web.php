@@ -32,6 +32,7 @@ Route::post('lineas/postCategory', 'CategoriesController@postCategory');
 Route::resource('lineas', 'CategoriesController');
 
 //SLIDES
+Route::post('admin_slides/getDelete', 'SlidesController@getDelete');
 Route::post('admin_slides/postSlide', 'SlidesController@postSlide');
 Route::resource('admin_slides', 'SlidesController');
 
