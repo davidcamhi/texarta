@@ -18,7 +18,7 @@
 	<section class="page-header page-header-xs" style="background-color: rgba(208, 239, 143, 0.3); padding: 10px 0 10px 0;">
 		<div class="container">
 	
-			<h1>{{ $product->name }}</h1>
+			<h1>{{ $product->category->name }} {{ $product->name }}</h1>
 	
 			<!-- breadcrumbs -->
 			<ol class="breadcrumb" style="position:relative;margin-top:5px;">
@@ -90,7 +90,7 @@
 				<!-- /buttons -->
 
 				<!--<hr />-->	
-				<h2 style="margin:0 0 0 0!important;">{{ $product->name }}</h2>
+				<h2 style="margin:0 0 0 0!important;">{{ $product->category->name }} {{ $product->name }}</h2>
 
 				<div class="clearfix">
                     @if($product->available == 1)

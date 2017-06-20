@@ -39,5 +39,5 @@
         <!-- END FORGOT PASSWORD FORM -->
 
     </div>
-    <div class="copyright"> 2016 Jamz. Admin. </div>
+    <div class="copyright"> 2017 Texarta. Admin. </div>
 @endsection

@@ -36,19 +36,16 @@ class WebProductsController extends Controller
      */
     public function search()
     {
-        $search = Request::get('search');
-        //$products = Product::get();
-        $categories = Category::get();
-        $result_products = DB::table('products')
-            ->select(DB::raw("*"))
-            ->where('name', '=', $search)
-            ->get();
-        $result_colors = DB::table('colors')
-            ->select(DB::raw("*"))
-            ->where('name', '=', $search)
-            ->get();
+        $search = \Request::get('search'); //<-- we use global request to get the param of URI
+        $result_products = Product::where('name','like','%'.$search.'%')
+            ->orderBy('name')->get();
+        $result_colors = Color::where('name','like','%'.$search.'%')
+            ->orderBy('name')->get();
+        $result_categories = Category::where('name','like','%'.$search.'%')
+            ->orderBy('name')->get();
 
-return view('web_products.search', compact('result_products'),compact('result_colors'));
+
+        return view('web_products.search', compact('result_products'),compact('result_colors'),compact('result_categories'));
 }
 /**
  * Show the application dashboard.

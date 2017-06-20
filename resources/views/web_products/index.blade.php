@@ -38,53 +38,7 @@
             
 			<!-- RIGHT -->
 			<div class="col-lg-12 col-md-12 col-sm-12">
-	
-				<!-- LIST OPTIONS -->
-				<!--<div class="clearfix shop-list-options margin-bottom-20">
-	
-					<ul class="pagination nomargin pull-right">
-						<li><a href="#">&laquo;</a></li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">&raquo;</a></li>
-					</ul>
-	
-					<div class="options-left">
-						<select>
-							<option value="pos_asc">Position ASC</option>
-							<option value="pos_desc">Position DESC</option>
-							<option value="name_asc">Name ASC</option>
-							<option value="name_desc">Name DESC</option>
-							<option value="price_asc">Price ASC</option>
-							<option value="price_desc">Price DESC</option>
-						</select>
-						
-					</div>
-	
-				</div>
-				<!-- /LIST OPTIONS -->
-				
-								<!-- 
-					controlls-over		= navigation buttons over the image 
-					buttons-autohide 	= navigation buttons visible on mouse hover only
-					
-					data-plugin-options:
-						"singleItem": true
-						"autoPlay": true (or ms. eg: 4000)
-						"navigation": true
-						"pagination": true
-						"items": "5"
-				
-					owl-carousel item paddings
-						.owl-padding-0
-						.owl-padding-3
-						.owl-padding-6
-						.owl-padding-10
-						.owl-padding-15
-						.owl-padding-20
-				-->
+
                 @foreach($categories as $category)
                 
 				    <h1 style="margin: 0 0 20px 0;">{{ $category->name }}</h1>
