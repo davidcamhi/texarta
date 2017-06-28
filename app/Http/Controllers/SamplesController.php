@@ -16,6 +16,7 @@ use App\Sample;
 use App\Product;
 use App\Category;
 use App\Color;
+use App\Catalog;
 
 class SamplesController extends Controller
 {
@@ -42,10 +43,13 @@ class SamplesController extends Controller
         $colors = Color::orderBy('name')->pluck('name', 'id');
         $categories->all();
         $colors->all();
-        
-         return view('web_samples.sample')
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+
+        return view('web_samples.sample')
             ->with('categories', $categories)
-            ->with('colors', $colors);
+            ->with('colors', $colors)
+            ->with('catalogo',$catalogo);
     }
 
     /**

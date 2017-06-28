@@ -130,7 +130,8 @@
 						<a class="logo pull-left" href="{{ url('/') }}">
 							<img src="/images/web_page/logo_texarta.png" alt="" />
 						</a>
-						@include('partials.menus._menuWebBest')
+
+						@include('partials.menus._menuWebBest',['catalogo' => $catalogo])
 
 					</div>
 				</header>

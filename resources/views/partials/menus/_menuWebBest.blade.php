@@ -15,9 +15,9 @@
 	<nav class="nav-main">
 		<!--
 			NOTE
-			
+
 			For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
-			Direct Link Example: 
+			Direct Link Example:
 
 			<li>
 				<a href="#">HOME</a>
@@ -29,7 +29,7 @@
 					INICIO
 				</a>
 			</li>
-			
+
 			<li id="li_productos" class="dropdown"><!-- FEATURES -->
 				<a class="dropdown-toggle" href="#">
 					PRODUCTOS
@@ -39,11 +39,9 @@
 					<li id="li_color"><a href="{{ url('colores') }}"><i class="et-paintbrush"></i> POR COLOR</a></li>
 				</ul>
 			</li>
-			
+
 			<li class="dropdown"><!-- PAGES -->
-				<a class="" href="#">
-					CATÁLOGO
-				</a>
+				<a href="{{ asset($catalogo->link) }}">CATÁLOGO</a>
 			</li>
 			<li id="li_contacto" class="dropdown"><!-- PAGES -->
 				<a class="dropdown-toggle" href="#">

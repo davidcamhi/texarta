@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\File;
 use App\Product;
 use App\Category;
 use App\Color;
+use App\Catalog;
 
 class WebProductsController extends Controller
 {
@@ -26,7 +27,12 @@ class WebProductsController extends Controller
     {
         $products = Product::get();
         $categories = Category::get();
-        return view('web_products.index', compact('products'),compact('categories'));
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+        return view('web_products.index')
+        ->with('products',$products)
+        ->with('categories',$categories)
+        ->with('catalogo',$catalogo);
     }
 
     /**
@@ -44,8 +50,13 @@ class WebProductsController extends Controller
         $result_categories = Category::where('name','like','%'.$search.'%')
             ->orderBy('name')->get();
 
+        $catalogo = Catalog::where('id','=','1')->get()->first();
 
-        return view('web_products.search', compact('result_products'),compact('result_colors'),compact('result_categories'));
+        return view('web_products.search')
+        ->with('result_products',$result_products)
+        ->with('result_colors',$result_colors)
+        ->with('result_categories',$result_categories)
+        ->with('catalogo',$catalogo);
 }
 /**
  * Show the application dashboard.
@@ -57,8 +68,11 @@ public function show($id)
 
     $product = Product::findOrFail($id);
     $others = Product::where('color_id', $product->color_id)->get();
+    $catalogo = Catalog::where('id','=','1')->get()->first();
+
     return view('web_products.show')
         ->with('others',$others)
-        ->with('product', $product);
+        ->with('product', $product)
+        ->with('catalogo',$catalogo);
 }
 }

@@ -36,6 +36,11 @@ Route::get('admin_slides/getDelete', 'SlidesController@getDelete');
 Route::post('admin_slides/postSlide', 'SlidesController@postSlide');
 Route::resource('admin_slides', 'SlidesController');
 
+//CATALOGO
+Route::post('catalogo/postCatalog', 'CatalogController@postCatalog');
+Route::resource('catalogo', 'CatalogController');
+
+
 //COLORS
 Route::get('admin_colores/getDelete', 'ColorsController@getDelete');
 Route::post('admin_colores/postColor', 'ColorsController@postColor');

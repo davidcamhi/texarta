@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\File;
 
 
 use App\Message;
-use App\Product;
-use App\Category;
-use App\Color;
+use App\Catalog;
 
 class MessagesController extends Controller
 {
@@ -38,7 +36,10 @@ class MessagesController extends Controller
      */
     public function create()
     {
-        return view('web_messages.message');
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+        return view('web_messages.message')
+            ->with('catalogo',$catalogo);
     }
 
     /**

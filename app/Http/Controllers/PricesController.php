@@ -16,6 +16,7 @@ use App\Price;
 use App\Product;
 use App\Category;
 use App\Color;
+use App\Catalog;
 
 class PricesController extends Controller
 {
@@ -42,10 +43,13 @@ class PricesController extends Controller
         $colors = Color::orderBy('name')->pluck('name', 'id');
         $categories->all();
         $colors->all();
-        
-         return view('web_prices.price')
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+
+        return view('web_prices.price')
             ->with('categories', $categories)
-            ->with('colors', $colors);
+            ->with('colors', $colors)
+            ->with('catalogo',$catalogo);
     }
 
     /**

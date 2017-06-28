@@ -26,8 +26,9 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::get();
+        $catalogo = Catalog::where('id','=','1')->get()->first();
 
-        return view('products.index', compact('products'));
+        return view('products.index', compact('products'), compact('catalogo'));
     }
 
     /**

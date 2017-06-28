@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\File;
 
 use App\Product;
 use App\Category;
+use App\Catalog;
 use App\Color;
 
 class WebColorsController extends Controller
@@ -25,7 +26,11 @@ class WebColorsController extends Controller
     public function index()
     {
         $colors = Color::get();
-        return view('web_colors.index',compact('colors'));
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+        return view('web_colors.index')
+        ->with('colors',$colors)
+        ->with('catalogo',$catalogo);
     }
     
      /**
@@ -37,10 +42,12 @@ class WebColorsController extends Controller
     {
         $color = Color::findOrFail($id);
         $products = Product::where('color_id', $id)->get();
-        
-         return view('web_colors.show')
+        $catalogo = Catalog::where('id','=','1')->get()->first();
+
+        return view('web_colors.show')
             ->with('color',$color)
-            ->with('products', $products);
+            ->with('products', $products)
+            ->with('catalogo',$catalogo);
     }
 	
 }

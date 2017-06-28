@@ -36,7 +36,12 @@
         <span class="title">Colores</span> 
     </a>
 </li>
-
+<li class="nav-item" id="li-catalog">
+    <a href=" {{ url('catalogo') }} " class="nav-link">
+        <i class="fa fa-file-pdf-o"></i>
+        <span class="title">Catálogo</span>
+    </a>
+</li>
 <li class="nav-item " id="litree-contact">
     <a href="javascript:void(0);" class="nav-link nav-toggle">
         <i class="fa fa-envelope"></i>
