@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\File;
 use App\Product;
 use App\Category;
 use App\Color;
+use App\Catalog;
+
 
 class ProductsController extends Controller
 {
