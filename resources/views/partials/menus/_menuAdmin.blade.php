@@ -21,13 +21,13 @@
     <ul class="sub-menu">
         <li class="nav-item start" id="li-slides">
             <a href=" {{ url('admin_slides') }} " class="nav-link">
-                <i class="fa fa-home"></i>
+                <i class="fa fa-camera-retro"></i>
                 <span class="title">Slider</span>
             </a>
         </li>
         <li class="nav-item start" id="li-info">
             <a href=" {{ url('info_contacto') }} " class="nav-link">
-                <i class="fa fa-home"></i>
+                <i class="fa fa-envelope"></i>
                 <span class="title">Información de Contacto</span>
             </a>
         </li>

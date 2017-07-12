@@ -116,7 +116,6 @@
 <!-- END CONTENT BODY -->
 @section('scripts')
     <script>
-        $("#li-products").addClass('active');
         $("#litree-home").addClass('active');
         $("#li-info").addClass('active');
         var token = "{{ csrf_token() }}";

@@ -156,6 +156,7 @@
 <!-- END CONTENT BODY -->
 @section('scripts')
     <script>
+        $("#litree-home").addClass('active');
         $("#li-slides").addClass('active');
         // Redirect
         // Redirect
