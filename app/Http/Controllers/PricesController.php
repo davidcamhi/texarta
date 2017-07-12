@@ -17,6 +17,7 @@ use App\Product;
 use App\Category;
 use App\Color;
 use App\Catalog;
+use App\Contact;
 
 class PricesController extends Controller
 {
@@ -44,11 +45,13 @@ class PricesController extends Controller
         $categories->all();
         $colors->all();
         $catalogo = Catalog::where('id','=','1')->get()->first();
+        $info = Contact::where('type','=','Cotización')->get()->first();
 
 
         return view('web_prices.price')
             ->with('categories', $categories)
             ->with('colors', $colors)
+            ->with('info',$info)
             ->with('catalogo',$catalogo);
     }
 

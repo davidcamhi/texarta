@@ -62,6 +62,11 @@ Route::get('cotizacion/getDelete', 'PricesController@getDelete');
 Route::post('cotizacion/postPrice', 'PricesController@postPrice');
 Route::resource('cotizacion', 'PricesController');
 
+Route::post('info_contacto/postContact', 'ContactController@postContact');
+Route::resource('info_contacto', 'ContactController');
+
+
+
 //WEB
 //HOME
 Route::resource('/', 'HomeController');

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\File;
 
 use App\Message;
 use App\Catalog;
+use App\Contact;
 
 class MessagesController extends Controller
 {
@@ -37,8 +38,10 @@ class MessagesController extends Controller
     public function create()
     {
         $catalogo = Catalog::where('id','=','1')->get()->first();
+        $info = Contact::where('type','=','Mensaje')->get()->first();
 
         return view('web_messages.message')
+            ->with('info',$info)
             ->with('catalogo',$catalogo);
     }
 

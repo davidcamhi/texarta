@@ -11,12 +11,29 @@
         <span class="title">Usuarios</span>
     </a>
 </li>
-<li class="nav-item" id="li-slides">
-    <a href=" {{ url('admin_slides') }} " class="nav-link">
+
+<li class="nav-item " id="litree-home">
+    <a href="javascript:void(0);" class="nav-link nav-toggle">
         <i class="fa fa-home"></i>
         <span class="title">Home Page</span>
+        <span class="arrow"></span>
     </a>
+    <ul class="sub-menu">
+        <li class="nav-item start" id="li-slides">
+            <a href=" {{ url('admin_slides') }} " class="nav-link">
+                <i class="fa fa-home"></i>
+                <span class="title">Slider</span>
+            </a>
+        </li>
+        <li class="nav-item start" id="li-info">
+            <a href=" {{ url('info_contacto') }} " class="nav-link">
+                <i class="fa fa-home"></i>
+                <span class="title">Información de Contacto</span>
+            </a>
+        </li>
+    </ul>
 </li>
+
 <li class="nav-item" id="li-products">
     <a href=" {{ url('productos') }} " class="nav-link">
         <i class="fa fa-tags"></i> 
@@ -71,12 +88,6 @@
                 <!--<span class="badge badge-success">1</span>-->
             </a>
         </li>
-        <!--<li class="nav-item start" id="li-calendar">
-            <a href="  " class="nav-link ">
-                <i class="icon-calendar"></i>
-                <span class="title">Calendario</span>
-            </a>
-        </li>-->
     </ul>
 </li>
 

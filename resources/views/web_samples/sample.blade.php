@@ -69,10 +69,15 @@
 		<!-- FORM -->
 		<div class="col-md-9 col-sm-9">
 
-			<h3>Para garantizar que nuestros productos sean perfectos para usted, ponemos a su alcance un formulario especial para cada una de sus <strong><em>peticiones.</em></strong></h3>
-            <h4>¿Le gustaría recibir una muestra física de alguno de nuestros productos?</h4>
-			<h4>Seleccione el que le gustaría recibir: </h4>
-
+			@if($info->main_text)
+				<h3>{{ $info->main_text }}</h3>
+			@endif
+			@if($info->text2)
+				<h4>{{ $info->text2 }}</h4>
+			@endif
+			@if($info->text3)
+				<h4>{{ $info->text3 }} </h4>
+			@endif
 			
 			<!--
 				MESSAGES
@@ -186,30 +191,32 @@
 
 		<!-- INFO -->
 		<div class="col-md-3 col-sm-3">
+			@if($info->title1)
+				<h2>{{ $info->title1 }}</h2>
+			@endif
 
-			<h2>Visítanos</h2>
-
-			<p>
-				Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.
-			</p>
-
+			@if($info->text_title)
+				<p>
+					{{ $info->text_title }}
+				</p>
+			@endif
 			<hr />
 
 			<p>
-				<span class="block"><strong><i class="fa fa-map-marker"></i> Dirección:</strong> Street Name, City Name, Country</span>
-				<span class="block"><strong><i class="fa fa-phone"></i> Teléfono:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
-				<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+				@if($info->address)<span class="block"><strong><i class="fa fa-map-marker"></i> Dirección:</strong> {{ $info->address }}</span>@endif
+				@if($info->phone)<span class="block"><strong><i class="fa fa-phone"></i> Teléfono:</strong> <a href="tel:1800-555-1234">{{ $info->phone }}</a></span>@endif
+				@if($info->email)<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:{{ $info->email }}">{{ $info->email }}</a></span>@endif
 			</p>
 
 			<hr />
-
-			<h4 class="font300">Horario</h4>
-			<p>
-				<span class="block"><strong>Lunes - Viernes:</strong> 10am a 6pm</span>
-				<span class="block"><strong>Sábado:</strong> 10am a 2pm</span>
-				<span class="block"><strong>Domingo:</strong> Cerrado</span>
-			</p>
-
+			@if($info->title2)
+				<h4 class="font300">{{ $info->title2 }}</h4>
+			@endif
+			@if($info->text_title2)
+				<p>
+					<span class="block">{!! $info->text_title2 !!} </span>
+				</p>
+			@endif
 		</div>
 		<!-- /INFO -->
 	</div>
