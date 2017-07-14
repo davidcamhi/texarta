@@ -41,9 +41,9 @@
 	                </div>
 	                <div class="details">
 	                    <div class="number">
-	                        <span data-counter="counterup" data-value="1349">0</span>
+	                        <span data-counter="counterup" data-value="{{ $total_products }}">0</span>
 	                    </div>
-	                    <div class="desc"> Nuevas Visitas </div>
+	                    <div class="desc"> Productos </div>
 	                </div>
 	            </a>
 	        </div>
@@ -54,8 +54,8 @@
 	                </div>
 	                <div class="details">
 	                    <div class="number">
-	                        <span data-counter="counterup" data-value="2.5">0</span>hr </div>
-	                    <div class="desc"> Tiempo de usuario en página </div>
+	                        <span data-counter="counterup" data-value="{{ $total_colors }}">0</span> </div>
+	                    <div class="desc"> Colores </div>
 	                </div>
 	            </a>
 	        </div>
@@ -66,9 +66,9 @@
 	                </div>
 	                <div class="details">
 	                    <div class="number">
-	                        <span data-counter="counterup" data-value="12.5">0</span>hr
+	                        <span data-counter="counterup" data-value="{{ $total_categories }}">0</span>
 	                    </div>
-	                    <div class="desc"> Tiempo que tarda usuario en regresar </div>
+	                    <div class="desc"> Líneas </div>
 	                </div>
 	            </a>
 	        </div>
@@ -79,133 +79,111 @@
 	                </div>
 	                <div class="details">
 	                    <div class="number"> 
-	                        <span data-counter="counterup" data-value="0.1">0</span>s </div>
-	                    <div class="desc"> Tiempo de carga </div>
+	                        <span data-counter="counterup" data-value="{{ $total_users }}">0</span> </div>
+	                    <div class="desc">Administradores </div>
 	                </div>
 	            </a>
 	        </div>
 	    </div>
 	    <div class="clearfix"></div>
 	    <!-- END DASHBOARD STATS 1-->
-	    <div class="row">
-	        <div class="col-md-12 col-sm-12">
-	            <!-- BEGIN PORTLET-->
-	            <div class="portlet light bordered">
-	                <div class="portlet-title">
-	                    <div class="caption">
-	                        <i class="icon-bar-chart font-dark hide"></i>
-	                        <span class="caption-subject font-dark bold uppercase">Visitas al sitio</span>
-	                        <span class="caption-helper">mensuales...</span>
-	                    </div>
-	                </div>
-	                <div class="portlet-body">
-	                    <div id="site_statistics_loading">
-	                        <img src="/img/loading.gif" alt="loading" /> </div>
-	                    <div id="site_statistics_content" class="display-none">
-	                        <div id="site_statistics" class="chart"> </div>
-	                    </div>
-	                </div>
-	            </div>
-	            <!-- END PORTLET-->
-	        </div>
-	        <!--<div class="col-md-6 col-sm-6">
-	            <div class="portlet light bordered">
-	                <div class="portlet-title">
-	                    <div class="caption">
-	                        <i class="icon-share font-dark hide"></i>
-	                        <span class="caption-subject font-dark bold uppercase">Datos Regionales</span>
-	                    </div>
-	                    <div class="actions">
-	                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" data-container="false" data-placement="bottom" href="javascript:;"> </a>
-	                    </div>
-	                </div>
-	                <div class="portlet-body">
-	                    <div id="region_statistics_loading">
-	                        <img src="/img/loading.gif" alt="loading" /> </div>
-	                    <div id="region_statistics_content" class="display-none">
-	                        <div class="btn-toolbar margin-bottom-10">
-	                            <div class="btn-group pull-right">
-	                                <a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Selecciona Región
-	                                    <span class="fa fa-angle-down"> </span>
-	                                </a>
-	                                <ul class="dropdown-menu pull-right">
-	                                    <li>
-	                                        <a href="javascript:;" id="regional_stat_world"> World </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="javascript:;" id="regional_stat_usa"> USA </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="javascript:;" id="regional_stat_europe"> Europe </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="javascript:;" id="regional_stat_russia"> Russia </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="javascript:;" id="regional_stat_germany"> Germany </a>
-	                                    </li>
-	                                </ul>
-	                            </div>
-	                        </div>
-	                        <div id="vmap_world" class="vmaps display-none"> </div>
-	                        <div id="vmap_usa" class="vmaps display-none"> </div>
-	                        <div id="vmap_europe" class="vmaps display-none"> </div>
-	                        <div id="vmap_russia" class="vmaps display-none"> </div>
-	                        <div id="vmap_germany" class="vmaps display-none"> </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>-->
-	    </div>
-	    
-	    <div class="row">
-	        <div class="col-md-6 col-sm-6">
-                <!-- BEGIN CHART PORTLET-->
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption">
-                            <i class="icon-bar-chart font-green-haze"></i>
-                            <span class="caption-subject bold uppercase font-green-haze"> Tráfico en las páginas</span>
-                            <span class="caption-helper">por página</span>
-                        </div>
-                        <div class="tools">
-                            <a href="javascript:;" class="collapse"> </a>
-                            <a href="#portlet-config" data-toggle="modal" class="config"> </a>
-                            <a href="javascript:;" class="reload"> </a>
-                            <a href="javascript:;" class="fullscreen"> </a>
-                            <a href="javascript:;" class="remove"> </a>
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div id="chart_1" class="chart" style="height: 500px;"> </div>
-                    </div>
-                </div>
-                <!-- END CHART PORTLET-->
-            </div>
-	        <div class="col-md-6 col-sm-6">
-                <!-- BEGIN CHART PORTLET-->
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption">
-                            <i class="icon-bar-chart font-green-haze"></i>
-                            <span class="caption-subject bold uppercase font-green-haze"> Clicks en anuncios</span>
-                            <span class="caption-helper">por cliente</span>
-                        </div>
-                        <div class="tools">
-                            <a href="javascript:;" class="collapse"> </a>
-                            <a href="#portlet-config" data-toggle="modal" class="config"> </a>
-                            <a href="javascript:;" class="reload"> </a>
-                            <a href="javascript:;" class="fullscreen"> </a>
-                            <a href="javascript:;" class="remove"> </a>
-                        </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div id="chart_2" class="chart" style="height: 500px;"> </div>
-                    </div>
-                </div>
-                <!-- END CHART PORTLET-->
-            </div>
-	    </div>
+		<div class="row">
+			<!-- Visitors -->
+			<div class="col-md-6">
+				<div class="panel panel-primary" >
+					<div class="panel-heading">
+						Visitantes en los últimos 6 días
+					</div>
+					<div class="panel-body" id="visitors">
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Visitors -->
+			<div class="col-md-6">
+				<div class="panel panel-primary" >
+					<div class="panel-heading">
+						Pageviews en los últimos 6 días
+					</div>
+					<div class="panel-body" id="pageviews">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Top visitas -->
+			<div class="col-lg-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						Pageviews por ruta de la página
+					</div>
+					<div class="panel-body" class="table-responsive">
+						<table id="pageviews" class="table table-striped">
+							<thead>
+							<tr>
+								<th>Página</th>
+								<th>Pageviews</th>
+							</tr>
+							</thead>
+
+							<tbody>
+							@if($pageviews)
+								@for($i = 0; $i < count($pageviews); $i++)
+									<tr>
+										<td>{{ $pageviews[$i][0] }}</td>
+										<td>{{ $pageviews[$i][1] }}</td>
+									</tr>
+								@endfor
+							@endif
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Visitors by cities -->
+			<div class="col-lg-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						Sesiones por ciudad
+					</div>
+					<!----------------------------------------------------------------------------
+                        PANEL BODY - Gráfica cities
+                    ----------------------------------------------------------------------------->
+					<div class="panel-body" id="visitors_cities" class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+							<tr>
+								<th>No.</th>
+								<th>País</th>
+								<th>Ciudad</th>
+								<th>Sesiones</th>
+							</tr>
+							</thead>
+
+							<tbody>
+							@if($result_cities)
+								@for($i = 0; $i < count($result_cities); $i++)
+									<tr>
+										<td>{{ $i + 1 }}</td>
+										<td>{{ $result_cities[$i][0] }}</td>
+										<td>{{ $result_cities[$i][1] }}</td>
+										<td>{{ $result_cities[$i][2] }}</td>
+									</tr>
+								@endfor
+							@endif
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
 	    
 	</div>
 	<!-- END CONTENT BODY -->
@@ -252,4 +230,12 @@
     <!-- END PAGE LEVEL PLUGINS -->
 
     <script src="/js/dashboard/dashboard.js" type="text/javascript"></script>
+
+	<!-- Highcharts -->
+	<script src="/plugins/highcharts/highcharts.js"></script>
+	<script src="/plugins/highcharts/exporting.js"></script>
+
+	{!! $chart_visitors !!}
+	{!! $chart_pageviews !!}
+
 @endsection
