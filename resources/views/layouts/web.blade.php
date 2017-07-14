@@ -58,9 +58,8 @@
 		<div id="wrapper">
 
 			<!-- Top Bar -->
-			<div id="topBar">
+			<!--<div id="topBar">
 				<div class="container">
-					<!-- right -->
 					<ul class="top-links list-inline pull-right">
 						<li>
 							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a>
@@ -72,9 +71,9 @@
 						</li>	
 					</ul>
 
-					<!-- left -->
 				</div>
 			</div>
+			-->
 			<!-- /Top Bar -->
 			<!-- 
 				AVAILABLE HEADER CLASSES

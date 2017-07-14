@@ -85,9 +85,9 @@
 			-->
 			<div id="header" class="transparent clearfix"style="border-bottom: 0px!important;">
          <!-- Top Bar -->
+				<!--
                     <div id="topBar" style="background-color: rgba(0,0,0,0.3);!important" class="transparent">
                         <div class="container translucent">
-                            <!-- right -->
                             <ul class="top-links list-inline pull-right">
                                 <li>
                                     <a class="dropdown-toggle no-text-underline" style="color:#fff;" data-toggle="dropdown" href="#"><img class="flag-lang" src="/images/web_page/flags/mx.png" width="16" height="11" alt="lang" /> ESPAÑOL</a>
@@ -99,9 +99,9 @@
                                 </li>	
                             </ul>
 
-                            <!-- left -->
                         </div>
                     </div>
+                    -->
                     <!-- /Top Bar -->
 				<!-- TOP NAV -->
 				<header id="topNav">
