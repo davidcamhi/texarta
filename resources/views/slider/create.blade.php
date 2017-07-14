@@ -175,6 +175,4 @@
     <script src="/js/form-samples.min.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
 
-
-
 @endsection
