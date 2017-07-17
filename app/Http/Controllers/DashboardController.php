@@ -36,10 +36,6 @@ class DashboardController extends Controller
     public function index()
     {
         // Set dates
-        $date1 = Carbon::now();
-        $date1->setDate(2016, 3, 7);
-        $date2 = Carbon::now();
-
         $date = Period::days(7);
         // Get last visitors and pageviews of last 7 days
         $visitors_pageviews = LaravelAnalytics::fetchVisitorsAndPageViews($date);
@@ -53,7 +49,6 @@ class DashboardController extends Controller
         // Get pageviews
         $pageviews = $this->pageviews($date);
         $pageviews = $pageviews->rows;
-
         $total_products = Product::count();
         $total_colors = Color::count();
         $total_categories = Category::count();
@@ -81,16 +76,24 @@ class DashboardController extends Controller
     private function visitors_pageviews($visitors_pageviews, $num)
     {
         $visitors = array(); $pageviews = array(); $dates = array();
-
+        $visits = 0;
+        $pages =0 ;
         // Get visitors and pageviews
         foreach($visitors_pageviews as $i => $vp){
-            if($i != 7){
-                array_push($visitors, (int)$vp["visitors"]);
-                array_push($pageviews, array(date('d-m-Y', strtotime($vp["date"])), (int)$vp["pageViews"]));
-                array_push($dates, date('d-m-Y', strtotime($vp["date"])));
+            $visits = $visits + (int)$vp["visitors"];
+            $pages = $pages + (int)$vp["pageViews"];
+            $date = date('d-m-Y', strtotime($vp["date"]));
+            if ($i>0){
+                if ($temp!=$date || $i==count($visitors_pageviews)-1){
+                    array_push($visitors, $visits);
+                    array_push($pageviews, array($temp,$pages));
+                    array_push($dates, $temp);
+                    $pages = 0;
+                    $visits = 0;
+                }
             }
+            $temp = date('d-m-Y', strtotime($vp["date"]));
         }
-
         if($num == 1){
             $chart = $this->visitors_chart('visitors', 'Visitantes', $visitors, $dates);
         }elseif($num == 2){
