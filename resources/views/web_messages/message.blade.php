@@ -1,10 +1,10 @@
 @extends('layouts.web')
 @section('meta')
 	<meta charset="utf-8" /> 
-	<title>Texarta | Mensaje</title>
-	<meta name="keywords" content="HTML5,CSS3,Template" />
-	<meta name="description" content="" />
-	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+	<title>Mensaje | Texarta</title>
+	<meta name="keywords" content="Texarta, telas, mexico, mexicanas, calidad, textiles, mobiliario, butacas, empresa" />
+	<meta name="description" content="Texarta es una empresa mexicana de telas para mobiliario y butacas. " />
+	<meta name="Author" content="Texarta" />
 
 	<!-- mobile settings -->
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />

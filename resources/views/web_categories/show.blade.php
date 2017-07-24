@@ -1,10 +1,10 @@
 @extends('layouts.web')
 @section('meta')
 	<meta charset="utf-8" /> 
-	<title>Texarta | Línea</title>
-	<meta name="keywords" content="HTML5,CSS3,Template" />
-	<meta name="description" content="" />
-	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+	<title>{{ $category->name }} | Texarta</title>
+	<meta name="keywords" content="Texarta, telas, mexico, mexicanas, calidad, textiles, mobiliario, butacas, empresa" />
+	<meta name="description" content="Texarta es una empresa mexicana de telas para mobiliario y butacas. " />
+	<meta name="Author" content="Texarta" />
 
 	<!-- mobile settings -->
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -47,7 +47,7 @@
 	
 							<div class="thumbnail" style="overflow: hidden;">
 								<!-- product image(s) -->
-								<a class="shop-item-image" href="{{ url('lista-productos/'.$product->id) }}">
+								<a class="shop-item-image" href="{{ url('producto/'.$product->category_id.'/'.$product->name) }}">
 									<img style="min-height:260px; max-height:260px;transform:scale(1.4,1.4)" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
 								</a>
 								<!-- /product image(s) -->

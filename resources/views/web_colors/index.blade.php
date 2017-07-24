@@ -1,10 +1,11 @@
 @extends('layouts.web')
 @section('meta')
 	<meta charset="utf-8" /> 
-	<title>Texarta | Colores</title>
+	<title>Colores | Texarta</title>
 	<meta name="keywords" content="HTML5,CSS3,Template" />
-	<meta name="description" content="" />
-	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+	<meta name="keywords" content="Texarta, telas, mexico, mexicanas, calidad, textiles, mobiliario, butacas, empresa" />
+	<meta name="description" content="Texarta es una empresa mexicana de telas para mobiliario y butacas. " />
+	<meta name="Author" content="Texarta" />
 
 	<!-- mobile settings -->
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -38,7 +39,7 @@
 				<ul class="row clients-dotted list-inline">
                     @foreach($colors as $color)
                     <li class="col-md-3 col-sm-3 col-xs-6">
-                        <a href="{{ url('colores/'.$color->id) }}">
+                        <a href="{{ url('colores/'.$color->name) }}">
                             <h4>{{ $color->name }}</h4>
                             <img style="min-height:200px; max-height:200px;" class="img-responsive" src="{{ asset('/images/web_page/colors/'.$color->image) }}" alt="{{ $color->name  }}">
                         </a>

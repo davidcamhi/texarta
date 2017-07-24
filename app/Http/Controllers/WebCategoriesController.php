@@ -24,9 +24,10 @@ class WebCategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function show($id)
+     public function show($name)
     {
-        $category = Category::findOrFail($id);
+        $category = Category::where('name','=', $name)->firstOrFail();
+        $id = $category->id;
         $products = Product::where('category_id', $id)->get();
         $catalogo = Catalog::where('id','=','1')->get()->first();
 

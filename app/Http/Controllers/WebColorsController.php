@@ -38,10 +38,11 @@ class WebColorsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function show($id)
+     public function show($name)
     {
-        $color = Color::findOrFail($id);
-        $products = Product::where('color_id', $id)->get();
+        $color = Color::where('name','=', $name)->firstOrFail();
+
+        $products = Product::where('color_id', $color->id)->get();
         $catalogo = Catalog::where('id','=','1')->get()->first();
 
         return view('web_colors.show')

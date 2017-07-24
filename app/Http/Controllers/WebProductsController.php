@@ -57,22 +57,23 @@ class WebProductsController extends Controller
         ->with('result_colors',$result_colors)
         ->with('result_categories',$result_categories)
         ->with('catalogo',$catalogo);
-}
-/**
- * Show the application dashboard.
- *
- * @return \Illuminate\Http\Response
- */
-public function show($id)
-{
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show($category_id,$name)
+    {
+       // $category = Category::where('id', $category_id)->get();
+        $product = Product::where('name',$name)->where('category_id',$category_id)->get()->first();
 
-    $product = Product::findOrFail($id);
-    $others = Product::where('color_id', $product->color_id)->get();
-    $catalogo = Catalog::where('id','=','1')->get()->first();
+        $others = Product::where('color_id', $product->color_id)->get();
+        $catalogo = Catalog::where('id','=','1')->get()->first();
 
-    return view('web_products.show')
-        ->with('others',$others)
-        ->with('product', $product)
-        ->with('catalogo',$catalogo);
-}
+        return view('web_products.show')
+            ->with('others',$others)
+            ->with('product', $product)
+            ->with('catalogo',$catalogo);
+    }
 }

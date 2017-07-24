@@ -4,10 +4,10 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
-		<title>Texarta | Home</title>
-		<meta name="keywords" content="HTML5,CSS3,Template" />
-		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<title>Home | Texarta</title>
+		<meta name="keywords" content="Texarta, telas, mexico, mexicanas, calidad, textiles, mobiliario, butacas, empresa" />
+		<meta name="description" content="Texarta es una empresa mexicana de telas para mobiliario y butacas. " />
+		<meta name="Author" content="Texarta" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -276,8 +276,8 @@
 						<ul class="list-inline inline-links mobile-block pull-right nomargin">
 							<li><a href="{{ url('/') }}">INICIO</a></li>
 							<li><a href="{{ url('lista-productos') }}">PRODUCTOS</a></li>
-							<li><a href="#">CATÁLOGO</a></li>
-							<li><a href="{{ url('mensaje') }}">CONTACTO</a></li>
+							<li><a href="{{ asset($catalogo->link) }}">CATÁLOGO</a></li>
+							<li><a href="{{ url('mensajes/create') }}">CONTACTO</a></li>
 						</ul>
 
 						&copy; Todos los derechos reservados, Texarta

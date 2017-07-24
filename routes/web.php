@@ -70,11 +70,17 @@ Route::resource('info_contacto', 'ContactController');
 //WEB
 //HOME
 Route::resource('/', 'HomeController');
+
 //PRODUCTS
 Route::get('lista-productos/buscar', 'WebProductsController@search');
 Route::resource('lista-productos', 'WebProductsController');
-//CATEGORIES
-Route::resource('linea', 'WebCategoriesController');
 
+Route::get('producto/{category_id}/{name}', ['as' => 'producto', 'uses' => 'WebProductsController@show']);
+
+//CATEGORIES
+//Route::resource('linea', 'WebCategoriesController');
 //COLORS
-Route::resource('colores', 'WebColorsController');
+Route::get('colores/{name}',  ['as' => 'color', 'uses' => 'WebColorsController@show']);
+Route::get('colores', 'WebColorsController@index');
+
+Route::get('{name}', ['as' => 'linea', 'uses' => 'WebCategoriesController@show']);

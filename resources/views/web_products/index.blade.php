@@ -1,10 +1,10 @@
 @extends('layouts.web')
 @section('meta')
 	<meta charset="utf-8" /> 
-	<title>Texarta | Lista de productos</title>
-	<meta name="keywords" content="HTML5,CSS3,Template" />
-	<meta name="description" content="" />
-	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+	<title>Lista de productos | Texarta</title>
+	<meta name="keywords" content="Texarta, telas, mexico, mexicanas, calidad, textiles, mobiliario, butacas, empresa" />
+	<meta name="description" content="Texarta es una empresa mexicana de telas para mobiliario y butacas. " />
+	<meta name="Author" content="Texarta" />
 
 	<!-- mobile settings -->
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -50,7 +50,7 @@
                                     <div class="">
                                         <div style="overflow: hidden" class="thumbnail">
                                             <!-- product image(s) -->
-                                            <a class="shop-item-image" href="{{ url('lista-productos/'.$product->id)  }}">
+                                            <a class="shop-item-image" href="{{ url('producto/'.$product->category_id .'/'.$product->name)  }}">
                                                 <img style="min-height:269px; max-height:269px;transform:scale(1.3,1.3);" class="img-responsive" src="{{ asset('/images/web_page/products/'.$product->image) }}" alt="shop first image" />
                                             </a>
                                             <!-- /product image(s) -->
@@ -64,7 +64,7 @@
                                 @endif
                             @endforeach
                         </div>
-                        <a href="{{ url('linea/'.$category->id)  }}" style=""><button class="btn btn-md btn-primary">Ver todos</button></a>
+                        <a href="{{ url($category->name)  }}" style=""><button class="btn btn-md btn-primary">Ver todos</button></a>
                     </div>
 				    <hr />
 				@endforeach
