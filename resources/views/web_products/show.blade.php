@@ -262,7 +262,7 @@
 
 				<div class="thumbnail">
 					<!-- product image(s) -->
-					<a class="shop-item-image" href="{{ url('lista-productos/'.$other->id)  }} ">
+					<a class="shop-item-image" href="{{ url('producto/'.$other->category_id.'/'.$other->name)  }} ">
 						<img style="transform:scale(1.3,1.3);" class="img-responsive" src="{{ asset('/images/web_page/products/'.$other->image) }}" alt="shop first image" />
 					</a>
 					<!-- /product image(s) -->
