@@ -41,7 +41,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
     <a href="index.html">
-        <img src="/img/test/logo2.png" alt="logo" />
+        <img src="/images/web_page/logo_texarta_light.png" alt="logo" />
     </a>
 </div>
 <!-- END LOGO -->

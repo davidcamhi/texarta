@@ -43,7 +43,7 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="{{ url('usuarios') }}">
-                    <img src="/img/test/logo2.png" alt="logo" class="logo-default" />
+                    <img style="width:65%;margin-top:0px!important;" src="/images/web_page/logo_texarta_light.png" alt="logo" class="logo-default" />
                     <!--<img src="{{-- asset('public/img/logo780x420.png') --}}" class="img-responsive" alt="jamz-logo" id="logo_img" style="max-height: 50px;" />-->
                 </a>
                 <div class="menu-toggler sidebar-toggler">
