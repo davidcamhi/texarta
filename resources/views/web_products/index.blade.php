@@ -78,7 +78,7 @@
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
 	<script type="text/javascript" src="/js/web_page/demo-shop.min.js"></script>
-	<script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.js"></script>
     <script>
         $("#li_productos").addClass('active');
         $("#li_todos").addClass('active');
