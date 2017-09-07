@@ -11,7 +11,7 @@
 	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 @endsection
 @section('styles')
-	<link href="/css/web_page/layout-shop.css" rel="stylesheet" type="text/css" />
+	<link href="/css/web_page/layout-shop.min.css" rel="stylesheet" type="text/css" />
 	<link href="/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
 	<!--<link href="/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />-->
 @endsection
@@ -77,8 +77,8 @@
 @endsection
 @section('scripts')
 	<!-- PAGE LEVEL SCRIPTS -->
-	<script type="text/javascript" src="/js/web_page/demo.shop.js"></script>
-	<script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="/js/web_page/demo-shop.min.js"></script>
+	<script type="text/javascript" src="/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script>
         $("#li_productos").addClass('active');
         $("#li_todos").addClass('active');

@@ -22,13 +22,12 @@
 		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- THEME CSS -->
-		<link href="/css/web_page/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="/css/web_page/layout.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/essentials.min.css" rel="stylesheet" type="text/css" />
+		<link href="/css/web_page/layout.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
-		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="/css/web_page/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="/css/web_page/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="/css/web_page/darkblue.min.css" rel="stylesheet" type="text/css" id="color_scheme" />
 		@yield('styles')
 	</head>
 
@@ -218,7 +217,7 @@
 		<script type="text/javascript" src="/js/web_page/jquery-2.2.3.min.js"></script>
 
 
-		<script type="text/javascript" src="/js/web_page/scripts.js"></script>
+		<script type="text/javascript" src="/js/web_page/scripts.min.js"></script>
 		
 
 		@yield('scripts')
