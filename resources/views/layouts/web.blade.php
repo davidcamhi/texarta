@@ -219,7 +219,6 @@
 
 		<script type="text/javascript" src="/js/web_page/scripts.min.js"></script>
 		
-
 		@yield('scripts')
 	</body>
 </html>

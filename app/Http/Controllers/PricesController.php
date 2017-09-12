@@ -41,16 +41,19 @@ class PricesController extends Controller
     public function create()
     {
         $categories = Category::orderBy('name')->pluck('name', 'id');
-        $colors = Color::orderBy('name')->pluck('name', 'id');
+        $products = Product::orderBy('name')->pluck('name', 'id');
+        $productos = Product::orderBy('name')->select('name', 'id','category_id')->get();
+
         $categories->all();
-        $colors->all();
+        $products->all();
         $catalogo = Catalog::where('id','=','1')->get()->first();
         $info = Contact::where('type','=','Cotización')->get()->first();
 
 
         return view('web_prices.price')
             ->with('categories', $categories)
-            ->with('colors', $colors)
+            ->with('products', $products)
+            ->with('productos', $productos)
             ->with('info',$info)
             ->with('catalogo',$catalogo);
     }
@@ -70,7 +73,7 @@ class PricesController extends Controller
         $price->company = $request->get('company');
         $price->tel = $request->get('tel');
         $price->category_id = $request->get('category_id');
-        $price->color_id = $request->get('color_id');
+        $price->product_id = $request->get('product_id');
         $price->quantity = $request->get('quantity');
         $price->unit = $request->get('unit');
         
