@@ -49,9 +49,9 @@
                             <thead>
                             <tr>
                                 <th class="desktop">Id</th>
-                                <th class="all"> Nombre </th>
-                                <th class="all"> Categoría </th>
                                 <th class="all"> Color </th>
+                                <th class="all"> Producto </th>
+                                <th class="all"> Familia </th>
                                 <th class="all"> Descripción </th>
                                 <th class="min-tablet"> Principal </th>
                                 <th class="min-tablet"> Disponible </th>

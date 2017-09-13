@@ -26,7 +26,7 @@ class WebColorsController extends Controller
     public function index()
     {
         $colors = Color::get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_colors.index')
         ->with('colors',$colors)

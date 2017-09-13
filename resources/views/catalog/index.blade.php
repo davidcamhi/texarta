@@ -36,7 +36,12 @@
                         <div class="table-toolbar">
                             <div class="row">
                                 <div class="col-md-6">
-
+                                    <div class="btn-group">
+                                        <a href="{{ url('catalogo/create') }}">
+                                            <button id="sample_editable_1_new" class="btn sbold green"> Agregar
+                                                <i class="fa fa-plus"></i>
+                                            </button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,6 +51,7 @@
                                 <th class="desktop">Id</th>
                                 <th class="all"> Nombre </th>
                                 <th class="all"> Link </th>
+                                <th class="all"> Línea</th>
                                 <th class="min-tablet"> Acciones </th>
                             </tr>
                             </thead>
@@ -55,6 +61,8 @@
                                     <td>{{ $cat->id }}</td>
                                     <td> {{ $cat->name }}  </td>
                                     <td> <a href="{{ asset($cat->link) }}">{{ asset($cat->link) }}</a>  </td>
+                                    <td> {{ $cat->category->name }}  </td>
+
                                     <td>
                                         <div class="btn-group">
                                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
@@ -64,6 +72,10 @@
                                                 <li>
                                                     <a href=" {{ url('catalogo/'.$cat->id.'/edit')  }} ">
                                                         <i class="icon-docs"></i> Editar </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" onclick="getId({{ $cat->id }})" data-toggle="modal" data-target="#modal_user">
+                                                        <i class="icon-trash"></i> Eliminar </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -84,10 +96,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">¿Estás seguro de eliminar esta Slide?</h4>
+                    <h4 class="modal-title">¿Estás seguro de eliminar este catálogo?</h4>
                 </div>
                 <div class="modal-body">
-                    <button id="delete_slides" class="btn btn-danger">Borrar</button>
+                    <button id="delete" class="btn btn-danger">Borrar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Regresar</button>
                 </div>
             </div>
@@ -99,7 +111,6 @@
 @section('scripts')
     <script>
         $("#li-catalog").addClass('active');
-        var token = "{{ csrf_token() }}";
     </script>
 
 
@@ -110,11 +121,35 @@
     <script src="/js/admin/table-datatables-responsive.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
+        var token = "{{ csrf_token() }}";
 
         // Redirect
         function redirect_catalog(){
             window.location="{{URL::to('catalogo')}}";
         }
+        // Get id
+        var id = '';
+        function getId(id_product){
+            id = id_product;
+        }
 
+        // Delete tag
+        $('#delete').click(function(){
+
+            console.log("Deleting");
+
+            // Ajax request
+            $.ajax({
+                url: 'catalogo/getDelete',
+                type: 'POST',
+                data: { "id": id, "_token": token },
+                cache: false,
+                success: function(response)
+                {
+                    console.log(response);
+                    redirect_catalog();
+                }
+            });
+        });
     </script>
 @endsection

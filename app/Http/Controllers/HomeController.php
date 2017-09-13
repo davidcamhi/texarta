@@ -17,8 +17,10 @@ class HomeController extends Controller
     public function index()
     {
         $slides = Slide::get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
-        return view('web_home.index', compact('slides'), compact('catalogo') );
+        return view('web_home.index')
+            ->with('catalogo',$catalogo)
+            ->with('slides',$slides);
     }
 }

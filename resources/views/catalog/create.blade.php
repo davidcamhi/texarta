@@ -44,6 +44,7 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class="form-body">
                                             <h3 class="form-section">Información</h3>
+
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -55,6 +56,17 @@
                                                     <!--<span class="help-block"> This is inline help </span>-->
                                                     </div>
                                                 </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Línea</label>
+                                                        {!! Form::select('category_id', $categories, null,  ['class' => 'form-control']) !!}
+                                                        @if ($errors->has('category_id'))
+                                                            <span class="help-block"><strong>{{ $errors->first('category_id') }}</strong></span>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
                                                 <!--/span-->
                                                 <div class="col-md-6">
                                                     <div class="">

@@ -54,7 +54,15 @@
                                                     <!--<span class="help-block"> This is inline help </span>-->
                                                     </div>
                                                 </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Línea</label>
+                                                        {!! Form::select('category_id', $categories, null,  ['class' => 'form-control']) !!}
+                                                    </div>
+                                                </div>
                                                 <!--/span-->
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="">
                                                         <label class="control-label">Archivo</label>
@@ -65,12 +73,11 @@
                                                     <!--<span class="help-block"> This is inline help </span>-->
                                                     </div>
                                                 </div>
-                                                <!--/span-->
                                             </div>
                                         </div>
                                         <div class="form-actions right">
                                             <button type="button" onclick="redirect_catalog();" class="btn default">Cancelar</button>
-                                            <button type="submit" class="btn blue"><i class="fa fa-check"></i> Agregar</button>
+                                            <button type="submit" class="btn blue"><i class="fa fa-check"></i> Editar</button>
                                         </div>
                                     </form>
                                     <!-- END FORM-->

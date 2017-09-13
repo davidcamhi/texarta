@@ -188,7 +188,6 @@
 						<ul class="list-inline inline-links mobile-block pull-right nomargin">
 							<li><a href="{{ url('/') }}">Inicio</a></li>
 							<li><a href="{{ url('lista-productos') }}">Productos</a></li>
-							<li><a href="{{ asset($catalogo->link) }}">Catálogo</a></li>
 							<li><a href="{{ url('mensajes/create') }}">Contacto</a></li>
 						</ul>
 						&copy; Todos los derechos reservados, Texarta

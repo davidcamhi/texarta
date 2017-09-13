@@ -182,8 +182,7 @@
 								<label for="unit">Unidad</label>
 								<select class="form-control pointer" name="unit">
 									<option value="metros">Metros</option>
-									<option value="pies">Pies</option>
-									<option value="yardas">Yardas</option>
+									<option value="rollos">Rollos</option>
 								</select>
 							</div>
 						</div>

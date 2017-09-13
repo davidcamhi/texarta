@@ -40,8 +40,15 @@
 				</ul>
 			</li>
 
-			<li class="dropdown"><!-- PAGES -->
-				<a href="{{ asset($catalogo->link) }}">CATÁLOGO</a>
+			<li id="li_contacto" class="dropdown"><!-- PAGES -->
+				<a class="dropdown-toggle" href="#">
+					CATÁLOGOS
+				</a>
+					<ul class="dropdown-menu">
+						@foreach($catalogo as $cat)
+							<li id=""><a target="_blank" href="{{ asset($cat->link) }}"><i class="et-envelope"></i> {{ $cat->category->name }}</a></li>
+						@endforeach
+					</ul>
 			</li>
 			<li id="li_contacto" class="dropdown"><!-- PAGES -->
 				<a class="dropdown-toggle" href="#">

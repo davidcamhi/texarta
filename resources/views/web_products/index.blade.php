@@ -65,6 +65,13 @@
                             @endforeach
                         </div>
                         <a href="{{ url($category->name)  }}" style=""><button class="btn btn-md btn-primary">Ver todos</button></a>
+						@foreach($products as $product)
+							@foreach($catalogo as $cat)
+								@if($cat->category_id == $product->category_id)
+									<a target="_blank" href="{{ asset($cat->link)  }}" style=""><button class="btn btn-md btn-primary">Catálogo</button></a>
+								@endif
+							@endforeach
+						@endforeach
                     </div>
 				    <hr />
 				@endforeach

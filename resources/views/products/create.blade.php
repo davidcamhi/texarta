@@ -60,7 +60,7 @@
 	                                    <div class="row">
 	                                        <div class="col-md-6">
 	                                            <div class="form-group">
-	                                                <label class="control-label">Nombre</label>
+	                                                <label class="control-label">Color</label>
 	                                                <input type="text" id="name" name="name" class="form-control" placeholder="Nombre del producto">
                                                     @if ($errors->has('name'))
                                                         <span class="help-block"><strong>{{ $errors->first('name') }}</strong></span>
@@ -94,7 +94,7 @@
 	                                        <!--/span-->
 	                                         <div class="col-md-6">
 	                                            <div class="form-group">
-	                                                <label class="control-label">Color</label>
+	                                                <label class="control-label">Familia</label>
 	                                                {!! Form::select('color_id', $colors, null,  ['class' => 'form-control']) !!}
                                                     @if ($errors->has('color_id'))
                                                         <span class="help-block"><strong>{{ $errors->first('color_id') }}</strong></span>

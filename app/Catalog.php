@@ -19,5 +19,12 @@ class Catalog extends Authenticatable
     protected $fillable = [
         'link'
     ];
-
+    /**
+     * One product belongs to one category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function category(){
+        return $this->belongsTo('App\Category');
+    }
 }

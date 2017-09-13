@@ -276,7 +276,6 @@
 						<ul class="list-inline inline-links mobile-block pull-right nomargin">
 							<li><a href="{{ url('/') }}">INICIO</a></li>
 							<li><a href="{{ url('lista-productos') }}">PRODUCTOS</a></li>
-							<li><a href="{{ asset($catalogo->link) }}">CATÁLOGO</a></li>
 							<li><a href="{{ url('mensajes/create') }}">CONTACTO</a></li>
 						</ul>
 

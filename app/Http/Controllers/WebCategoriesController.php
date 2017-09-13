@@ -29,7 +29,7 @@ class WebCategoriesController extends Controller
         $category = Category::where('name','=', $name)->firstOrFail();
         $id = $category->id;
         $products = Product::where('category_id', $id)->get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_categories.show')
             ->with('category',$category)

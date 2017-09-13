@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Http\Requests\StoreSample;
 
 use App\Http\Requests\SimpleRequest;
-
+use App\Category;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\File;
 
@@ -35,8 +35,10 @@ class CatalogController extends Controller
      */
     public function create()
     {
+        $categories = Category::orderBy('name')->pluck('name', 'id');
 
-        return view('catalog.create');
+        return view('catalog.create')
+            ->with('categories',$categories);
     }
 
     /**
@@ -55,6 +57,8 @@ class CatalogController extends Controller
             $request->file->move('../public/', $imageName);
             $catalog->link = $imageName;
         }
+        $catalog->category_id = $request->get('category_id');
+
         $catalog->save();
 
         return redirect('catalogo');
@@ -69,8 +73,10 @@ class CatalogController extends Controller
     public function edit($id)
     {
         $catalog = Catalog::findOrFail($id);
+        $categories = Category::orderBy('name')->pluck('name', 'id');
 
         return view('catalog.edit')
+            ->with('categories',$categories)
             ->with('catalog', $catalog);
 
     }
@@ -85,6 +91,7 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::findOrFail($id);
         $catalog->name = $request->get('name');
+        $catalog->category_id = $request->get('category_id');
 
         if ($request->hasFile('file')) {
             $imageName = time().'.'.$request->file->getClientOriginalExtension();
@@ -94,6 +101,22 @@ class CatalogController extends Controller
         $catalog->save();
 
         return redirect('catalogo');
+    }
+    /**
+     * Delete (method used for confirmation screen)
+     *
+     * @param SimpleRequest $request
+     * @return Response
+     */
+    public function getDelete(Request $request)
+    {
+        $id_catalog = $request->get('id');
+
+        $catalog = Catalog::findOrFail($id_catalog);
+        $catalog->delete();
+
+
+        return('Delete successfull!');
     }
 
 }

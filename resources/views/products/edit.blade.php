@@ -84,7 +84,7 @@
 	                                        <!--/span-->
 	                                         <div class="col-md-6">
 	                                            <div class="form-group">
-	                                                <label class="control-label">Tejido</label>
+	                                                <label class="control-label">Color</label>
 	                                                {!! Form::select('color_id', $colors, null,  ['class' => 'form-control']) !!}
 	                                            </div>
 	                                        </div>

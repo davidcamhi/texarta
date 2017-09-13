@@ -27,7 +27,7 @@ class WebProductsController extends Controller
     {
         $products = Product::get();
         $categories = Category::get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_products.index')
         ->with('products',$products)
