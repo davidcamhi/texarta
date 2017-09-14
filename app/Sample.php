@@ -18,8 +18,8 @@ class Sample extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function color(){
-        return $this->belongsTo('App\Color');
+    public function product(){
+        return $this->belongsTo('App\Product');
     }
 	
 	/**

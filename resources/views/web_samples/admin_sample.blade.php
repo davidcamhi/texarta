@@ -62,7 +62,7 @@
                                         <td> {{ $sample->name }}  </td>
                                         <td> {{ $sample->email }}  </td>
                                         <td> {{ $sample->category->name }} </td>
-                                        <td> {{ $sample->color->name }}  </td>
+                                        <td> {{ $sample->product->name }}  </td>
                                         <td> {{ $sample->company }}  </td>
                                         <td> {{ $sample->tel }}  </td>
                                         <td> {{ $sample->comments }}  </td>

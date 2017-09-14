@@ -74,7 +74,7 @@ class SamplesController extends Controller
         $sample->company = $request->get('company');
         $sample->tel = $request->get('tel');
         $sample->category_id = $request->get('category_id');
-        $sample->color_id = $request->get('color_id');
+        $sample->product_id = $request->get('product_id');
         
         $sample->save();
         $request->session()->flash('alert-success', '!Gracias! A la brevedad responderemos a su petición, o nos pondremos en contacto con usted.');

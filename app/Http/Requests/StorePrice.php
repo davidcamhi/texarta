@@ -27,7 +27,7 @@ class StorePrice extends FormRequest
             'name' => 'required',
             'email' => 'required|email',
             'category_id'=>'required',
-            'color_id'=>'required',
+            'product_id'=>'required',
         ];
     }
 
@@ -38,7 +38,7 @@ class StorePrice extends FormRequest
             'email.required' => 'Una dirección de e-mail es necesaria.',
             'email.email' => 'Asegúrese de ingresar una dirección email válida.',
             'category_id.required' => 'Elija una línea.',
-            'color_id.required' => 'Elija un color.',
+            'product_id.required' => 'Elija un color.',
 
         ];
     }
