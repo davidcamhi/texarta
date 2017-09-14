@@ -44,7 +44,7 @@
 <li class="nav-item" id="li-categories">
     <a href=" {{ url('lineas') }} " class="nav-link">
         <i class="fa fa-sitemap"></i> 
-        <span class="title">Líneas</span> 
+        <span class="title">Familias</span>
     </a>
 </li>
 <li class="nav-item" id="li-colors">
@@ -56,7 +56,7 @@
 <li class="nav-item" id="li-catalog">
     <a href=" {{ url('catalogo') }} " class="nav-link">
         <i class="fa fa-file-pdf-o"></i>
-        <span class="title">Catálogo</span>
+        <span class="title">Catálogos</span>
     </a>
 </li>
 <li class="nav-item " id="litree-contact">

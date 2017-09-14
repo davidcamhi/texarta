@@ -46,7 +46,7 @@ class PricesController extends Controller
 
         $categories->all();
         $products->all();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
         $info = Contact::where('type','=','Cotización')->get()->first();
 
 

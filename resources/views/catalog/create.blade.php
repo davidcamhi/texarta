@@ -58,7 +58,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="control-label">Línea</label>
+                                                        <label class="control-label">Familia</label>
                                                         {!! Form::select('category_id', $categories, null,  ['class' => 'form-control']) !!}
                                                         @if ($errors->has('category_id'))
                                                             <span class="help-block"><strong>{{ $errors->first('category_id') }}</strong></span>

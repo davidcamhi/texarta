@@ -154,7 +154,7 @@
                     <div class="row">
 						<div class="form-group">
 							<div class="col-md-6">
-								<label for="category_id">Línea</label>
+								<label for="category_id">Familia</label>
 								{!! Form::select('category_id', $categories, null,  ['class' => 'form-control', 'id'=>'select_category']) !!}
                                 @if ($errors->has('category_id'))
                                     <span class="help-block"><strong>{{ $errors->first('category_id') }}</strong></span>
@@ -163,7 +163,6 @@
 							<div class="col-md-6">
 								<label for="color_id">Producto</label>
 								<select class="form-control" name="product_id" id="select_product">
-
 
 								</select>
                                 @if ($errors->has('product_id'))
@@ -252,7 +251,6 @@
 
             Object.keys(data).forEach(function(llave) {
                 if(data[llave].category_id == category) {
-                    console.log(data.id);
                     $('#select_product').append($('<option>', {
                         value: data[llave].id,
                         text: data[llave].name

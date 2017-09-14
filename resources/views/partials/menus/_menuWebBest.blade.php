@@ -46,7 +46,7 @@
 				</a>
 					<ul class="dropdown-menu">
 						@foreach($catalogo as $cat)
-							<li id=""><a target="_blank" href="{{ asset($cat->link) }}"><i class="et-envelope"></i> {{ $cat->category->name }}</a></li>
+							<li id=""><a target="_blank" href="{{ asset($cat->link) }}"> {{ $cat->category->name }}</a></li>
 						@endforeach
 					</ul>
 			</li>

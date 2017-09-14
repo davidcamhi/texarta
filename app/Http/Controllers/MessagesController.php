@@ -37,7 +37,7 @@ class MessagesController extends Controller
      */
     public function create()
     {
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
         $info = Contact::where('type','=','Mensaje')->get()->first();
 
         return view('web_messages.message')

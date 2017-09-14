@@ -41,16 +41,20 @@ class SamplesController extends Controller
     public function create()
     {
         $categories = Category::orderBy('name')->pluck('name', 'id');
-        $colors = Color::orderBy('name')->pluck('name', 'id');
+
+        $productos = Product::orderBy('name')->select('name', 'id','category_id')->get();
+        $products = Product::orderBy('name')->pluck('name', 'id');
+
+        $productos->all();
         $categories->all();
-        $colors->all();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
         $info = Contact::where('type','=','Muestra')->get()->first();
 
 
         return view('web_samples.sample')
             ->with('categories', $categories)
-            ->with('colors', $colors)
+            ->with('products', $products)
+            ->with('productos', $productos)
             ->with('info',$info)
             ->with('catalogo',$catalogo);
     }

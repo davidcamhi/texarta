@@ -11,14 +11,14 @@
                     <i class="fa fa-circle"></i>
                 </li>
                 <li>
-                    <a href="#">Líneas</a>
+                    <a href="#">Familias</a>
                     <i class="fa fa-circle"></i>
                 </li>
             </ul>
         </div>
         <!-- END PAGE BAR -->
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title"> Líneas
+        <h3 class="page-title"> Familias
             <!--<small>managed datatable samples</small>-->
         </h3>
         <!-- END PAGE TITLE-->
@@ -29,7 +29,7 @@
                 <div class="portlet box green">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-layers"></i>Líneas </div>
+                            <i class="fa fa-layers"></i>Familias </div>
                         <div class="tools"> </div>
                     </div>
                     <div class="portlet-body">

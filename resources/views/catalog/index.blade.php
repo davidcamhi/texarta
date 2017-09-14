@@ -51,7 +51,7 @@
                                 <th class="desktop">Id</th>
                                 <th class="all"> Nombre </th>
                                 <th class="all"> Link </th>
-                                <th class="all"> Línea</th>
+                                <th class="all"> Familia</th>
                                 <th class="min-tablet"> Acciones </th>
                             </tr>
                             </thead>

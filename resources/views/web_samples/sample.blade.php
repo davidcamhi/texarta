@@ -155,18 +155,20 @@
                     <div class="row">
 						<div class="form-group">
 							<div class="col-md-6">
-								<label for="category_id">Línea</label>
-								{!! Form::select('category_id', $categories, null,  ['class' => 'form-control']) !!}
+								<label for="category_id">Familia</label>
+								{!! Form::select('category_id', $categories, null,  ['class' => 'form-control','id'=>'select_category']) !!}
                                 @if ($errors->has('category_id'))
                                     <span class="help-block"><strong>{{ $errors->first('category_id') }}</strong></span>
                                 @endif
 							</div>
 							<div class="col-md-6">
-								<label for="color_id">Color</label>
-								{!! Form::select('color_id', $colors, null,  ['class' => 'form-control']) !!}
-                                @if ($errors->has('color_id'))
-                                    <span class="help-block"><strong>{{ $errors->first('color_id') }}</strong></span>
-                                @endif
+								<label for="color_id">Producto</label>
+								<select class="form-control" name="product_id" id="select_product">
+
+								</select>
+								@if ($errors->has('product_id'))
+									<span class="help-block"><strong>{{ $errors->first('product_id') }}</strong></span>
+								@endif
 							</div>
 						</div>
 					</div>
@@ -227,5 +229,37 @@
     <script>
         $("#li_contacto").addClass('active');
         $("#li_muestra").addClass('active');
+
+        data = {!! str_replace("'", "\'", json_encode($productos)) !!};
+
+        $('#select_product').attr('disabled', 'disabled');
+
+        $( document ).ready(function() {
+            var category = $( "#select_category" ).val();
+
+            Object.keys(data).forEach(function(llave) {
+                if(data[llave].category_id == category) {
+                    $('#select_product').append($('<option>', {
+                        value: data[llave].id,
+                        text: data[llave].name
+                    }));
+                }
+            });
+            $('#select_product').removeAttr('disabled');
+        });
+
+        $('#select_category').on('change', function() {
+            var category = this.value;
+            $('#select_product').empty();
+            Object.keys(data).forEach(function(llave) {
+                if(data[llave].category_id == category) {
+                    $('#select_product').append($('<option>', {
+                        value: data[llave].id,
+                        text: data[llave].name
+                    }));
+                }
+            });
+            $('#select_product').removeAttr('disabled');
+        });
     </script>
 @endsection

@@ -16,7 +16,7 @@
 	            <i class="fa fa-circle"></i>
 	        </li>
 	        <li>
-	            <span>Líneas</span>
+	            <span>Familia</span>
 	             <i class="fa fa-circle"></i>
 	        </li>
 	        <li>
@@ -26,7 +26,7 @@
 	</div>
 	<!-- END PAGE BAR -->
 	<!-- BEGIN PAGE TITLE-->
-	<h3 class="page-title"> Crear Línea
+	<h3 class="page-title"> Crear Familia
 	    <small>nuevo</small>
 	</h3>
 	<!-- END PAGE TITLE-->
