@@ -47,8 +47,8 @@
                                     <th class="desktop">Id</th>
                                     <th class="all"> Nombre </th>
                                     <th class="min-tablet"> email </th>
-                                    <th class="all"> Línea </th>
-                                    <th class="all"> Color </th>
+                                    <th class="all"> Familia </th>
+                                    <th class="all"> Producto </th>
                                     <th class="none"> Compañía </th>
                                     <th class="none"> Teléfono </th>
                                     <th class="none"> Comentarios </th>
