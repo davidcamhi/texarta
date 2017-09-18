@@ -14,6 +14,7 @@
 	</script>
 	<head>
 		@yield('meta')
+		<link rel="shortcut icon" type="image/png" href="images/web_page/favicon.ico"/>
 
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
