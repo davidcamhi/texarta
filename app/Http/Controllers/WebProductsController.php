@@ -50,7 +50,7 @@ class WebProductsController extends Controller
         $result_categories = Category::where('name','like','%'.$search.'%')
             ->orderBy('name')->get();
 
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_products.search')
         ->with('result_products',$result_products)
@@ -69,7 +69,7 @@ class WebProductsController extends Controller
         $product = Product::where('name',$name)->where('category_id',$category_id)->get()->first();
 
         $others = Product::where('color_id', $product->color_id)->get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_products.show')
             ->with('others',$others)

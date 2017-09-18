@@ -38,7 +38,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('products.index', compact('products'), compact('catalogo'));
     }

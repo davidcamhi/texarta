@@ -43,7 +43,7 @@ class WebColorsController extends Controller
         $color = Color::where('name','=', $name)->firstOrFail();
 
         $products = Product::where('color_id', $color->id)->get();
-        $catalogo = Catalog::where('id','=','1')->get()->first();
+        $catalogo = Catalog::get();
 
         return view('web_colors.show')
             ->with('color',$color)

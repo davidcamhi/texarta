@@ -137,7 +137,7 @@
 
 						<!-- Logo -->
 						<a class="logo pull-left" href="{{ url('/') }}">
-							<img src="/images/web_page/logo_texarta_light.png" alt="" />
+							<img src="/images/web_page/logo_texarta_azul.png" alt="" />
 						</a>
 						@include('partials.menus._menuWebBest')
 					</div>
